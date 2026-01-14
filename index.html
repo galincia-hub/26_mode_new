@@ -3,12 +3,12 @@
 <html lang="ko" data-theme="light" style=""><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모두투어 한일전세선 기항지 관광 안내서</title>
+    <title>모두투어 한일전세선 기항지 관광 종합 안내서</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <style>
       body {
-        max-width: 1200px; /* Increased width for tables as requested in prompt although default instructions say 880px */
+        max-width: 1200px;
         margin: 0 auto;
         padding: 40px;
         font-family: 'Noto Sans KR', sans-serif;
@@ -16,43 +16,61 @@
         color: #333;
         font-size: 14px;
       }
- 
+
       /* Header Section */
       .header {
         background: linear-gradient(135deg, #0d47a1, #1e88e5, #4fc3f7);
         color: white;
-        padding: 20px 30px;
+        padding: 30px;
         border-radius: 12px;
         text-align: center;
         margin-bottom: 30px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
 
+      .header-logo-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .cruise-badge {
+        background: linear-gradient(135deg, #66bb6a, #43a047);
+        display: inline-block;
+        padding: 5px 16px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+        font-size: 11px;
+        font-weight: 600;
+        color: white;
+        letter-spacing: 0.3px;
+      }
+
       .header h1 {
-        margin: 0;
-        font-size: 2rem;
+        margin: 10px 0 0 0;
+        font-size: 1.5rem;
         font-weight: 700;
         color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        letter-spacing: 0.5px;
       }
 
       .header h2 {
-        margin: 15px 0 0 0;
-        font-size: 1.2rem;
-        font-weight: 500;
+        margin: 6px 0 0 0;
+        font-size: 0.9rem;
+        font-weight: 400;
         color: #e3f2fd;
-      }
-
-      .header-icon {
-        font-size: 2.4rem;
-        margin-bottom: 10px;
-        display: block;
+        opacity: 0.9;
       }
 
       /* Section Styling */
       section {
         background: white;
-        padding: 30px;
+        padding: 25px;
         border-radius: 12px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         margin-bottom: 30px;
@@ -68,6 +86,50 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        margin-top: 0;
+      }
+
+      /* Content Container for Part 4 & 5 */
+      .content-container {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid #0d47a1;
+        margin-bottom: 30px;
+      }
+
+      .content-container-orange {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e65100;
+        margin-bottom: 30px;
+      }
+
+      .section-header-blue {
+        background-color: #0d47a1;
+        color: white;
+        padding: 12px 20px;
+        font-weight: 700;
+        font-size: 16px;
+        border-bottom: 1px solid #0a357a;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .section-header-orange {
+        background-color: #ff6f00;
+        color: white;
+        padding: 12px 20px;
+        font-weight: 700;
+        font-size: 16px;
+        border-bottom: 1px solid #e65100;
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
 
       /* Tables */
@@ -95,15 +157,7 @@
         font-size: 13px;
       }
 
-      /* Part 1 Table Specifics */
-      .summary-table td:first-child {
-        background-color: #f5fafd;
-        font-weight: 700;
-        text-align: center;
-        width: 20%;
-        color: #1565c0;
-      }
-
+      /* Course Code Badges */
       .course-code {
         color: #d32f2f;
         font-weight: 700;
@@ -112,6 +166,18 @@
         border-radius: 4px;
         font-size: 12px;
         margin-right: 5px;
+        display: inline-block;
+        min-width: 45px;
+        text-align: center;
+      }
+
+      /* Part 1 Table Specifics */
+      .summary-table td:first-child {
+        background-color: #f5fafd;
+        font-weight: 700;
+        text-align: center;
+        width: 20%;
+        color: #1565c0;
       }
 
       /* Part 2 Date Sections */
@@ -133,11 +199,6 @@
 
       .schedule-table tr:nth-child(even) {
         background-color: #fafbfc;
-      }
-
-      .special-mark {
-        color: #d32f2f;
-        font-weight: bold;
       }
 
       /* Part 3 Course Cards */
@@ -193,246 +254,453 @@
         font-size: 13px;
       }
 
-      /* Footer Warning */
-      .warning-box {
-        background-color: #fffde7;
-        border: 2px solid #fff59d;
-        border-radius: 8px;
-        padding: 20px;
-        margin-top: 20px;
+      /* Pricing Table Styles */
+      .pricing-table th {
+        background-color: #e3f2fd;
       }
 
-      .warning-title {
-        color: #f57f17;
+      .pricing-table td {
+        text-align: center;
+      }
+
+      .package-name {
         font-weight: 700;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 15px;
+        background-color: #fafafa;
       }
 
-      .warning-list {
-        margin: 0;
-        padding-left: 20px;
-        color: #5d4037;
+      .price-adult,
+      .price-child,
+      .price-free {
+        background-color: white;
+        color: #333;
       }
 
-      .warning-list li {
-        margin-bottom: 8px;
-      }
-
-      /* Utilities */
-      .badge {
-        display: inline-block;
-        padding: 4px 8px;
-        border-radius: 4px;
-        font-size: 12px;
+      .price-adult {
         font-weight: 600;
       }
-      .badge-red {
-        background: #ffebee;
-        color: #c62828;
+      .price-free {
+        font-weight: 600;
       }
-      .badge-blue {
-        background: #e3f2fd;
+
+      /* Footer Notes for Pricing */
+      .footer-notes {
+        padding: 20px;
+        background-color: #fff;
+        border-top: 2px solid #0d47a1;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .note-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+      }
+
+      .note-cell {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-weight: 600;
+      }
+
+      .note-list {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
         color: #1565c0;
       }
 
-      @media (max-width: 768px) {
-        body {
-          padding: 15px;
-        }
-        .header h1 {
-          font-size: 1.5rem;
-        }
-        td,
-        th {
-          padding: 8px;
-          font-size: 12px;
-        }
-        .card-info-row {
-          flex-direction: column;
-          gap: 5px;
-        }
+      .note-list li {
+        margin-bottom: 5px;
+        padding-left: 15px;
+        position: relative;
+      }
+
+      .note-list li::before {
+        content: '※';
+        position: absolute;
+        left: 0;
+        color: #1565c0;
+      }
+
+      .main-note {
+        color: #1565c0;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      /* Course List Styles for Part 4 */
+      .course-list-row td:first-child {
+        background-color: #f5fafd;
+        font-weight: 700;
+        text-align: center;
+        color: #1565c0;
+        width: 15%;
+        white-space: nowrap;
+      }
+
+      .course-item {
+        margin-bottom: 8px;
+        line-height: 1.5;
       }
     </style>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Open%20Sans:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Google%20Sans:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Noto%20Sans%20JP:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap" rel="stylesheet"></head>
+  </head>
   <body style="">
     <!-- Header -->
     <div class="header">
       <!-- Logo Section -->
-      <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px;">
-        <img src="https://www.modetour.com/images/common/logo.png" alt="모두투어 로고" style="height: 28px; filter: brightness(0) invert(1); display: none;" onerror="this.style.display='none'" data-height-listener-added="true">
+      <div class="header-logo-area">
+        <img src="https://www.modetour.com/images/common/logo.png" alt="모두투어 로고" style="height: 28px; filter: brightness(0) invert(1); display: none" onerror="this.style.display = 'none'" data-height-listener-added="true">
       </div>
-      
+
       <!-- Cruise Info Badge -->
-      <div style="
-        background: linear-gradient(135deg, #66bb6a, #43a047);
-        display: inline-block;
-        padding: 5px 16px;
-        border-radius: 20px;
-        margin-bottom: 10px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        border: 1.5px solid rgba(255,255,255,0.3);
-      ">
-        <span style="font-size: 11px; font-weight: 600; color: white; letter-spacing: 0.3px;">
-          2026년 6월 19일 부산출발 한일크루즈
-        </span>
-      </div>
-      
+      <div class="cruise-badge">2026년 6월 19일 부산출발 한일크루즈</div>
+
       <!-- Main Title -->
-      <h1 style="margin: 10px 0 0 0; font-size: 1.5rem; font-weight: 700; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); letter-spacing: 0.5px;">
-        모두투어 크루즈 기항지 안내서
-      </h1>
-      <h2 style="margin: 6px 0 0 0; font-size: 0.9rem; font-weight: 400; color: #e3f2fd; opacity: 0.9;">
-        하코다테 &amp; 오타루 2일 특별 투어 프로그램
-      </h2>
+      <h1>모두투어 크루즈 기항지 안내서</h1>
+      <h2>하코다테 &amp; 오타루 2일 특별 투어 프로그램</h2>
     </div>
 
-    <!-- Part 1 -->
-    <section>
-      <h3 class="section-title">📋 [Part 1] 기항지별 주요 관광 코스 요약</h3>
-      <table class="summary-table">
+    <!-- Part 4: Package Pricing -->
+    <div class="content-container">
+      <div class="section-header-blue">📦 패키지 상품 구성 및 가격</div>
+
+      <!-- Course Schedule -->
+      <div style="
+          background-color: #f5f5f5;
+          padding: 10px 15px;
+          border-bottom: 1px solid #dcdcdc;
+          font-weight: 700;
+          color: #333;
+        ">
+        1. 기항지 관광 간략 코스 안내</div>
+      <table>
         <thead>
           <tr>
-            <th>기항지</th>
+            <th width="20%">기항지</th>
             <th>주요 관광 코스</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>하코다테<br>6월21일(토)</td>
-            <td>
-              <div><span class="course-code">H1</span> 고료가쿠 타워/공원, 아카렌가 창고, 하코다테 로프웨이(야경)</div>
-              <div style="margin-top: 8px">
-                <span class="course-code">H2</span> 오오누마 국정공원, 아카렌가 창고, 하코다테 로프웨이(야경)
+          <tr class="course-list-row">
+            <td>하코다테<br><span style="font-weight: 400; font-size: 13px; color: #666">(6/21)</span></td>
+            <td style="text-align: left">
+              <div class="course-item">
+                <span class="course-code">H1</span>
+                고료가쿠 타워/공원, 아카렌가 창고, 하코다테 로프웨이(야경)
               </div>
-              <div style="margin-top: 8px">
-                <span class="course-code">H-PG</span> 시노리 파크 골프장(18H), 하코다테 로프웨이(야경)
+              <div class="course-item">
+                <span class="course-code">H2</span>
+                오오누마 국정공원, 아카렌가 창고, 하코다테 로프웨이(야경)
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td>오타루<br>(Day 1)
-  
-    <br><!--StartFragment--><span style="
-        color: rgb(21, 101, 192);
-        font-family: 'Noto Sans KR', sans-serif;
-        font-size: 14.9625px;
-        font-style: normal;
-        font-variant-ligatures: normal;
-        font-variant-caps: normal;
-        font-weight: 700;
-        letter-spacing: normal;
-        orphans: 2;
-        text-align: center;
-        text-indent: 0px;
-        text-transform: none;
-        widows: 2;
-        word-spacing: 0px;
-        -webkit-text-stroke-width: 0px;
-        white-space: normal;
-        background-color: rgb(245, 250, 253);
-        text-decoration-thickness: initial;
-        text-decoration-style: initial;
-        text-decoration-color: initial;
-        display: inline !important;
-        float: none;
-      ">6월22일(일)</span><!--EndFragment-->
-  
-
-</td>
-            <td>
-              <div><span class="course-code">O1</span> 오타루 운하, 오르골당 &amp; 과자거리, 윙베이 오타루</div>
-              <div style="margin-top: 8px">
-                <span class="course-code">O2</span> 오오도리 공원, 시계탑(외관), 이온 복합쇼핑몰
-              </div>
-              <div style="margin-top: 8px">
-                <span class="course-code">O3</span> 모이와야마 전망대, 오오도리 공원, 시계탑(외관)
+              <div class="course-item">
+                <span class="course-code">H-PG</span>
+                시노리 파크 골프장(18H), 하코다테 로프웨이(야경)
               </div>
             </td>
           </tr>
-          <tr>
-            <td>오타루<br>(Day 2)<br>
-  
-    <!--StartFragment--><span style="
-        color: rgb(21, 101, 192);
-        font-family: 'Noto Sans KR', sans-serif;
-        font-size: 14.9625px;
-        font-style: normal;
-        font-variant-ligatures: normal;
-        font-variant-caps: normal;
-        font-weight: 700;
-        letter-spacing: normal;
-        orphans: 2;
-        text-align: center;
-        text-indent: 0px;
-        text-transform: none;
-        widows: 2;
-        word-spacing: 0px;
-        -webkit-text-stroke-width: 0px;
-        white-space: normal;
-        background-color: rgb(245, 250, 253);
-        text-decoration-thickness: initial;
-        text-decoration-style: initial;
-        text-decoration-color: initial;
-        display: inline !important;
-        float: none;
-      ">6월23일(월)</span><!--EndFragment-->
-  
-
-<br></td>
-            <td>
-              <div><span class="course-code">OO1</span> 오타루 운하/오르골당, 시로이코히비토 파크, 시내 면세점</div>
-              <div style="margin-top: 8px">
-                <span class="course-code">OO2</span> 히츠지가오카 전망대, 북해도 개척촌, 오르골당, 시내 면세점
+          <tr class="course-list-row">
+            <td>오타루 Day 1<br><span style="font-weight: 400; font-size: 13px; color: #666">(6/22)</span></td>
+            <td style="text-align: left">
+              <div class="course-item">
+                <span class="course-code">O1</span>
+                오타루 운하, 오르골당 &amp; 과자거리, 윙베이 오타루&nbsp;
               </div>
-              <div style="margin-top: 8px">
-                <span class="course-code">OO3</span> 오타루 운하, 삿포로 맥주 박물관, 오오도리 공원, 시내 면세점
+              <div class="course-item">
+                <span class="course-code">O2</span>
+                오오도리 공원, 시계탑(외관), 이온 복합쇼핑몰&nbsp;&nbsp;
               </div>
-              <div style="margin-top: 8px">
-                <span class="course-code">OO-PG</span> 야마구치 녹지 파크 골프장(18H), 맥주 박물관, 시내 면세점
+              <div class="course-item">
+                <span class="course-code">O3</span>
+                모이와야마 전망대, 오오도리 공원, 시계탑(외관)
               </div>
-              <div style="margin-top: 8px">
-                <span class="course-code">OO-S</span> 천연 온천욕, 오타루 운하, 시내 면세점
+            </td>
+          </tr>
+          <tr class="course-list-row">
+            <td>오타루 Day 2<br><span style="font-weight: 400; font-size: 13px; color: #666">(6/23)</span></td>
+            <td style="text-align: left">
+              <div class="course-item">
+                <span class="course-code">OO1</span>
+                오타루 운하/오르골당, 시로이코히비토 파크, 시내 면세점&nbsp;&nbsp;
+              </div>
+              <div class="course-item">
+                <span class="course-code">OO2</span>
+                히츠지가오카 전망대, 북해도 개척촌, 오르골당, 시내 면세점&nbsp;
+              </div>
+              <div class="course-item">
+                <span class="course-code">OO3</span>
+                오타루 운하, 삿포로 맥주 박물관, 오오도리 공원, 시내 면세점&nbsp;
+              </div>
+              <div class="course-item">
+                <span class="course-code">OO-PG</span>
+                야마구치 녹지 파크 골프장(18H), 맥주 박물관, 시내 면세점&nbsp;&nbsp;
+              </div>
+              <div class="course-item">
+                <span class="course-code">OO-S</span>
+                천연 온천욕, 오타루 운하, 시내 면세점&nbsp;&nbsp;
               </div>
             </td>
           </tr>
         </tbody>
       </table>
-    </section>
 
-    <!-- Part 2 -->
-    <section>
-      <h3 class="section-title">🗓️ [Part 2] 일자별 기항지 투어 일정 요약</h3>
+      <!-- Product Price -->
+      <div style="
+          background-color: #f5f5f5;
+          padding: 10px 15px;
+          border-top: 1px solid #0d47a1;
+          border-bottom: 1px solid #dcdcdc;
+          font-weight: 700;
+          color: #333;
+        ">
+        2. 상품 가격 (Product Price)
+      </div>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th rowspan="3" width="8%" style="padding: 15px 10px">구분</th>
+            <th rowspan="3" width="18%" style="padding: 15px 10px">테마 및 추천 대상</th>
+            <th colspan="3" style="padding: 12px 10px">관광 코스 구성</th>
+            <th colspan="3" style="padding: 12px 10px">소비자 판매가 (1인당, 원)</th>
+          </tr>
+          <tr>
+            <th rowspan="2" width="11%" style="background-color: #e3f2fd; font-size: 12px; padding: 12px 8px">
+              하코다테<br><span style="font-size: 10px; font-weight: 400">(6/21)</span>
+            </th>
+            <th rowspan="2" width="11%" style="background-color: #e3f2fd; font-size: 12px; padding: 12px 8px">
+              오타루1<br><span style="font-size: 10px; font-weight: 400">(6/22)</span>
+            </th>
+            <th rowspan="2" width="11%" style="background-color: #e3f2fd; font-size: 12px; padding: 12px 8px">
+              오타루2<br><span style="font-size: 10px; font-weight: 400">(6/23)</span>
+            </th>
+            <th width="13%" style="background-color: #e3f2fd; color: #0d47a1; font-size: 12px; padding: 10px 8px">
+              성인
+            </th>
+            <th width="13%" style="background-color: #e3f2fd; color: #0d47a1; font-size: 12px; padding: 10px 8px">
+              소아
+            </th>
+            <th width="11%" style="background-color: #e3f2fd; color: #0d47a1; font-size: 12px; padding: 10px 8px">
+              유아
+            </th>
+          </tr>
+          <tr>
+            <th style="
+                background-color: #e3f2fd;
+                color: #555;
+                font-size: 10px;
+                font-weight: 500;
+                padding: 10px 5px;
+                line-height: 1.4;
+              ">
+              12세 이상<br>(2014.6.19 이전생)
+            </th>
+            <th style="
+                background-color: #e3f2fd;
+                color: #555;
+                font-size: 10px;
+                font-weight: 500;
+                padding: 10px 5px;
+                line-height: 1.4;
+              ">
+              3세~12세<br>(2014.6.20~<br>2023.6.19)
+            </th>
+            <th style="
+                background-color: #e3f2fd;
+                color: #555;
+                font-size: 10px;
+                font-weight: 500;
+                padding: 10px 5px;
+                line-height: 1.4;
+              ">
+              3세 미만<br>(2023.6.20<br>이후생)
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px">
+              📦<br>패키지 1<br><span style="font-size: 11px; color: #1976d2; font-weight: 600">(베스트)</span>
+            </td>
+            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+              <strong style="color: #0d47a1; font-size: 12px">[Classic Heritage]</strong><br>역사와 감성 여행&nbsp;<br>
+              <span style="color: #666; font-size: 10px">👨‍👩‍👧‍👦 추천: 아기자기한 시내관광과 북해도</span>
+            </td>
+            <td style="padding: 12px 8px">H1</td>
+            <td style="padding: 12px 8px">O1</td>
+            <td style="padding: 12px 8px">OO2</td>
+            <td class="price-adult" style="padding: 12px 8px">550,000</td>
+            <td class="price-child" style="padding: 12px 8px">440,000</td>
+            <td rowspan="6" class="price-free" style="vertical-align: middle; padding: 12px 8px">무료</td>
+          </tr>
+          <tr>
+            <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px">
+              📦<br>패키지 2<br><span style="font-size: 11px; color: #66bb6a; font-weight: 600">(힐링/가족)</span>
+            </td>
+            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+              <strong style="color: #0d47a1; font-size: 12px">[Healing &amp; Sweet]</strong><br>
+              자연 속 휴식과 쇼핑몰<br>
+              <span style="color: #666; font-size: 10px">👨‍👩‍👧‍👦 추천: 공원산책, 부모님 동반, 3대 가족</span>
+            </td>
+            <td style="padding: 12px 8px">H2</td>
+            <td style="padding: 12px 8px">O2</td>
+            <td style="padding: 12px 8px">OO1</td>
+            <td class="price-adult" style="padding: 12px 8px">540,000</td>
+            <td class="price-child" style="padding: 12px 8px">430,000</td>
+          </tr>
+          <tr>
+            <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px">
+              📦<br>패키지 3<br><span style="font-size: 11px; color: #ff9800; font-weight: 600">(세미팩 A추천!!)</span>
+            </td>
+            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+              <strong style="color: #0d47a1; font-size: 12px">[Romantic Semi]</strong><br>
+              핵심 관광 후<br>마지막 날은 자유롭게!<br>
+              <span style="color: #666; font-size: 10px">💑 추천: 커플, 여유파</span>
+            </td>
+            <td style="padding: 12px 8px">H1</td>
+            <td style="padding: 12px 8px">O1</td>
+            <td style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px">자유</td>
+            <td class="price-adult" style="padding: 12px 8px">340,000</td>
+            <td class="price-child" style="padding: 12px 8px">270,000</td>
+          </tr>
+          <tr>
+            <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px">
+              📦<br>패키지 4<br><span style="font-size: 11px; color: #ff9800; font-weight: 600">(세미팩 B)</span>
+            </td>
+            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+              <strong style="color: #0d47a1; font-size: 12px">[City Semi]</strong><br>
+              자연과 도시를 즐기고<br>자유시간까지<br>
+              <span style="color: #666; font-size: 10px">🛍️ 추천: 실속파, 쇼핑</span>
+            </td>
+            <td style="padding: 12px 8px">H2</td>
+            <td style="padding: 12px 8px">O2</td>
+            <td style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px">자유</td>
+            <td class="price-adult" style="padding: 12px 8px">340,000</td>
+            <td class="price-child" style="padding: 12px 8px">270,000</td>
+          </tr>
+          <tr>
+            <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px">
+              📦<br>패키지 5<br><span style="font-size: 11px; color: #ff9800; font-weight: 600">(세미팩 C)</span>
+            </td>
+            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+              <strong style="color: #0d47a1; font-size: 12px">[Highlight Semi]</strong><br>
+              첫날과 마지막 날<br>관광에 집중<br>
+              <span style="color: #666; font-size: 10px">⚡ 추천: 체력 안배 중시</span>
+            </td>
+            <td style="padding: 12px 8px">H1</td>
+            <td style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px">자유</td>
+            <td style="padding: 12px 8px">OO1</td>
+            <td class="price-adult" style="padding: 12px 8px">390,000</td>
+            <td class="price-child" style="padding: 12px 8px">310,000</td>
+          </tr>
+          <tr>
+            <td class="package-name" style="font-size: 13px; line-height: 1.4; background-color: #e8f5e9; padding: 15px 8px">
+              ⛳<br>패키지 6<br><span style="font-size: 11px; color: #2e7d32; font-weight: 600">(파크골프)</span>
+            </td>
+            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px; background-color: #f1f8f4">
+              <strong style="color: #2e7d32; font-size: 12px">[Active Golf]</strong><br>
+              북해도 자연 속 라운딩과<br>관광의 조화<br>
+              <span style="color: #666; font-size: 10px">⛳ 추천: 동호회, 액티브 시니어</span>
+            </td>
+            <td style="padding: 12px 8px">H-PG</td>
+            <td style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px">자유</td>
+            <td style="padding: 12px 8px">OO-PG</td>
+            <td class="price-adult" style="background-color: #f1f8f4; padding: 12px 8px">490,000</td>
+            <td class="price-child" style="background-color: #f1f8f4; padding: 12px 8px">390,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Part 5: Remarks -->
+    <div class="content-container-orange">
+      <div class="section-header-orange">⚠️ 상세 안내 및 주의사항</div>
+      <div style="padding: 20px">
+        <table style="margin-bottom: 0">
+          <thead>
+            <tr>
+              <th width="15%" style="background-color: #e3f2fd">구분</th>
+              <th style="background-color: #e3f2fd">내용</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center; font-weight: 700; background-color: #f5fafd; color: #1565c0">포함내역</td>
+              <td style="text-align: left">
+                ■ 기항지관광, 전문가이드, 크루즈 전문 인솔 가이드 동행, 여행지 입장료, 관광 프로그램 일정 내 식사
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 700; background-color: #f5fafd; color: #1565c0">
+                불포함내역
+              </td>
+              <td style="text-align: left">■ 자유일정, 일정에 포함되지 않은 식사 및 기타 개인 경비, 매너팁(자유) 등</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 700; background-color: #f5fafd; color: #1565c0">공통특전</td>
+              <td style="text-align: left">
+                ■ 배정된 전담 가이드가 승선부터 귀국까지 인솔 및 현지 가이드 서비스를 제공합니다.<br>
+                &nbsp;&nbsp;&nbsp;↳ 여행 전 해피콜, 승하선 수속 지원, 선내 시설 및 서비스 이용 안내, 각 기항지에서의
+                관광 안내 및 인솔
+              </td>
+            </tr>
+            <tr>
+              <td style="
+                  text-align: center;
+                  font-weight: 700;
+                  background-color: #f5fafd;
+                  color: #1565c0;
+                  vertical-align: top;
+                  padding-top: 15px;
+                ">
+                주의사항
+              </td>
+              <td style="text-align: left">
+                ■ 최소 출발 인원 35명 (인원 미달 시 추가 요금 발생 또는 다른 기항지관광 상품 안내 가능)<br>
+                ■ 기항지 두 곳 또는 세 곳을 패키지로 판매 (일부 기항지 선별 및 코스 변경 불가)<br>
+                ■ 일반 소비자용 취소료 약관과 동일하게 적용됩니다.<br>
+                ■ 기항지 투어 명단은 출발 3주 전까지 확정되어야 합니다.<br>
+                ■ <strong>파크골프(H-PG, OO-PG)</strong>: 본인 전용 채, 볼, 슈즈 지참 필수 / 선착순 40명 한정 /&nbsp;<br>
+                ■ <strong>온천(OO-S)</strong>: 쾌적한 입욕을 위해 선착순 36명 한정<br>
+                ■ 일정중&nbsp;<strong>자유 중식비(2,000엔)는</strong>&nbsp;인솔자가 현장에서 사전에 현찰로 지급 해 드립니다.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Part 1 -->
+    <section><h3 class="section-title">🗓️ 일자별 기항지 투어 요약</h3>
 
       <div class="date-header">📍 6월 21일 (토) - 하코다테</div>
       <table class="schedule-table">
         <thead>
           <tr>
-            <th width="20%">코스 구분</th>
+            <th width="25%">코스 구분</th>
             <th>주요 일정</th>
             <th width="20%">비고</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>[H1]</strong> 역사와 야경</td>
+            <td><strong>[H1] 역사와 야경</strong></td>
             <td>
               선내 중식 → 고료가쿠 타워/공원 → 아카렌가 창고 → <strong>선내 석식(재승선)</strong> → 로프웨이(야경)
             </td>
             <td>하코다테 랜드마크 집중</td>
           </tr>
           <tr>
-            <td><strong>[H2]</strong> 자연과 야경</td>
+            <td><strong>[H2] 자연과 야경</strong></td>
             <td>선내 중식 → 오오누마 국정공원 → 아카렌가 창고 → <strong>선내 석식(재승선)</strong> → 로프웨이(야경)</td>
             <td>대자연 속 힐링 중심</td>
           </tr>
           <tr>
-            <td><strong>[H-PG]</strong>&nbsp;하코다테<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 파크골프</td>
+            <td><strong>[H-PG] 파크골프</strong></td>
             <td>선내 중식 → 시노리 파크 골프장(18H) → <strong>선내 석식(재승선)</strong> → 로프웨이(야경)</td>
-            <td>개인장비 필수<br>선착순 30명</td>
+            <td>개인장비 필수 / 선착순 30명</td>
           </tr>
         </tbody>
       </table>
@@ -441,24 +709,24 @@
       <table class="schedule-table">
         <thead>
           <tr>
-            <th width="20%">코스 구분</th>
+            <th width="25%">코스 구분</th>
             <th>주요 일정</th>
             <th width="20%">비고</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>[O1]</strong> 오타루 감성</td>
+            <td><strong>[O1] 오타루 감성</strong></td>
             <td>선내 중식 → 오타루 운하 → 오르골당 &amp; 과자거리 → 윙베이 오타루 → 귀선</td>
             <td>오타루의 낭만과 쇼핑</td>
           </tr>
           <tr>
-            <td><strong>[O2]</strong> 삿포로 도심</td>
+            <td><strong>[O2] 삿포로 도심</strong></td>
             <td>선내 중식 → 오오도리 공원 &amp; 시계탑(외관) → 이온 복합쇼핑몰 → 귀선</td>
             <td>삿포로 핵심 관광과 쇼핑</td>
           </tr>
           <tr>
-            <td><strong>[O3]</strong> 삿포로 전망</td>
+            <td><strong>[O3] 삿포로 전망</strong></td>
             <td>선내 중식 → 모이와야마 전망대 → 오오도리 공원 &amp; 시계탑(외관) → 귀선</td>
             <td>시원한 전망과 시내 관광</td>
           </tr>
@@ -469,42 +737,38 @@
       <table class="schedule-table">
         <thead>
           <tr>
-            <th width="20%">코스 구분</th>
+            <th width="25%">코스 구분</th>
             <th>주요 일정</th>
             <th width="20%">비고</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>[OO1]</strong> 오타루&amp;시로이</td>
+            <td><strong>[OO1] 오타루&amp;시로이</strong></td>
             <td>오타루 운하/오르골당 → <strong>현지식 중식</strong> → 시로이코히비토 파크 → 면세점 → 출항</td>
-            <td class="special-mark">현지식 중식*</td>
+            <td><strong>현지식 중식*</strong></td>
           </tr>
           <tr>
-            <td><strong>[OO2]</strong> 전망&amp;역사</td>
+            <td><strong>[OO2] 전망&amp;역사</strong></td>
             <td>히츠지가오카 전망대 → 북해도 개척촌 → <strong>현지식 중식</strong> → 오르골당 → 면세점 → 출항</td>
-            <td class="special-mark">현지식 중식*</td>
+            <td><strong>현지식 중식*</strong></td>
           </tr>
           <tr>
-            <td><strong>[OO3]</strong> 맥주&amp;도심</td>
+            <td><strong>[OO3] 맥주&amp;도심</strong></td>
             <td>
               오타루 운하 → 맥주 박물관 → <strong>자유 중식(2,000엔 지급)</strong> → 오오도리 공원 → 면세점 → 출항
             </td>
-            <td class="special-mark">자유 중식*</td>
+            <td><strong>자유 중식*</strong></td>
           </tr>
           <tr>
-            <td><strong>[OO-PG]</strong> 삿포로 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;파크골프</td>
+            <td><strong>[OO-PG] 삿포로 골프</strong></td>
             <td>야마구치 파크 골프장(18H) → <strong>자유 중식(2,000엔 지급)</strong> → 맥주 박물관 → 면세점 → 출항</td>
-            <td class="special-mark">
-              자유 중식*<br><span style="color: #555; font-weight: normal">선착순 30명</span>
-            </td>
+            <td><strong>자유 중식*</strong> / 선착순 30명</td>
           </tr>
           <tr>
-            <td><strong>[OO-S]</strong> 온천 힐링</td>
+            <td><strong>[OO-S] 온천 힐링</strong></td>
             <td>온천욕 → <strong>현지식 중식</strong> → 오타루 운하 → 시내 면세점 → 출항</td>
-            <td class="special-mark">
-              현지식 중식*<br><span style="color: #555; font-weight: normal">선착순 36명</span>
-            </td>
+            <td><strong>현지식 중식*</strong> / 선착순 36명</td>
           </tr>
         </tbody>
       </table>
@@ -512,7 +776,7 @@
 
     <!-- Part 3 -->
     <section>
-      <h3 class="section-title">🚢 [Part 3] 기항지관광 프로그램 상세 설명</h3>
+      <h3 class="section-title">🚢 기항지관광 상세 설명</h3>
 
       <!-- H1 Card -->
       <div class="course-card">
@@ -526,19 +790,22 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 고료가쿠 타워 &amp; 공원</div>
             <div class="attraction-desc">
-              107m 높이의 전망대에서 일본 최초의 서양식 성곽인 거대 별 모양 요새를 한눈에 조망하고, 역사 깊은 공원을 산책하는 하코다테 필수 코스.
+              107m 높이의 전망대에서 일본 최초의 서양식 성곽인 거대 별 모양 요새를 한눈에 조망하고, 역사 깊은 공원을
+              산책하는 하코다테 필수 코스.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 하코다테 아카렌가</div>
             <div class="attraction-desc">
-              개항기 창고를 개조한 붉은 벽돌 단지로, 이국적인 분위기의 카페와 기념품 숍이 즐비하여 항구 도시의 낭만을 즐기며 쇼핑하기에 최적인 명소.
+              개항기 창고를 개조한 붉은 벽돌 단지로, 이국적인 분위기의 카페와 기념품 숍이 즐비하여 항구 도시의 낭만을
+              즐기며 쇼핑하기에 최적인 명소.
             </div>
           </div>
           <div class="attraction-item" style="margin-bottom: 0">
             <div class="attraction-title">■ 하코다테 로프웨이</div>
             <div class="attraction-desc">
-              산 정상까지 로프웨이를 타고 이동하여 '세계 3대 야경' 중 하나로 꼽히는 하코다테의 다이아몬드 야경을 감상하는 투어의 하이라이트 시간.
+              산 정상까지 로프웨이를 타고 이동하여 '세계 3대 야경' 중 하나로 꼽히는 하코다테의 다이아몬드 야경을
+              감상하는 투어의 하이라이트 시간.
             </div>
           </div>
         </div>
@@ -556,19 +823,22 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 오오누마 국정공원</div>
             <div class="attraction-desc">
-              웅장한 코마가타케 산을 배경으로 그림 같은 호수 풍경이 펼쳐지는 곳. 호수 위 작은 섬들을 잇는 다리를 건너며 북해도의 광활한 자연을 느끼는 힐링 코스.
+              웅장한 코마가타케 산을 배경으로 그림 같은 호수 풍경이 펼쳐지는 곳. 호수 위 작은 섬들을 잇는 다리를 건너며
+              북해도의 광활한 자연을 느끼는 힐링 코스.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 하코다테 아카렌가</div>
             <div class="attraction-desc">
-              붉은 벽돌 창고군을 따라 걷는 로맨틱한 항구 산책. 아기자기한 소품샵과 카페가 가득하여 하코다테만의 여유로운 분위기를 즐기기에 최적의 장소.
+              붉은 벽돌 창고군을 따라 걷는 로맨틱한 항구 산책. 아기자기한 소품샵과 카페가 가득하여 하코다테만의 여유로운
+              분위기를 즐기기에 최적의 장소.
             </div>
           </div>
           <div class="attraction-item" style="margin-bottom: 0">
             <div class="attraction-title">■ 하코다테 로프웨이</div>
             <div class="attraction-desc">
-              선내에서 편안하게 석식을 마친 후 다시 이동하여 관람하는 코스. 산 정상에서 내려다보는 다이아몬드처럼 빛나는 야경은 잊지 못할 감동을 선사함.
+              선내에서 편안하게 석식을 마친 후 다시 이동하여 관람하는 코스. 산 정상에서 내려다보는 다이아몬드처럼 빛나는
+              야경은 잊지 못할 감동을 선사함.
             </div>
           </div>
         </div>
@@ -576,7 +846,7 @@
 
       <!-- H-PG Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/21, 하코다테 - H-PG ]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;파크골프</div>
+        <div class="card-header">[ 6/21, 하코다테 - H-PG ]</div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
           <span>💪 코스 난이도 : 상</span>
@@ -586,13 +856,15 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 시노리 파크 골프장</div>
             <div class="attraction-desc">
-              하코다테 공항 인근 녹지에 위치한 탁 트인 코스에서 즐기는 18홀 라운딩. 북해도의 시원한 바람을 맞으며 건강과 여유를 동시에 챙길 수 있는 전문 스포츠 코스.
+              하코다테 공항 인근 녹지에 위치한 탁 트인 코스에서 즐기는 18홀 라운딩. 북해도의 시원한 바람을 맞으며 건강과
+              여유를 동시에 챙길 수 있는 전문 스포츠 코스.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 하코다테 로프웨이</div>
             <div class="attraction-desc">
-              라운딩 후 선내에서 석식을 마치고 즐기는 야경 관람. 하코다테 산 정상에서 내려다보는 환상적인 도시 불빛으로 하루의 피로를 씻어내는 일정.
+              라운딩 후 선내에서 석식을 마치고 즐기는 야경 관람. 하코다테 산 정상에서 내려다보는 환상적인 도시 불빛으로
+              하루의 피로를 씻어내는 일정.
             </div>
           </div>
           <div class="attraction-item" style="
@@ -604,7 +876,8 @@
             ">
             <div class="attraction-title" style="color: #e65100">⚠️ 안내 사항</div>
             <div class="attraction-desc" style="padding-left: 0; color: #bf360c">
-              본인 소유의 파크 골프채, 볼, 슈즈 지참이 필수이며, 버스 1대당 최대 선착순 30명까지만 모집 가능한 한정 상품입니다.
+              본인 소유의 파크 골프채, 볼, 슈즈 지참이 필수이며, 버스 1대당 최대 선착순 30명까지만 모집 가능한 한정
+              상품입니다.
             </div>
           </div>
         </div>
@@ -622,19 +895,22 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 오타루 운하</div>
             <div class="attraction-desc">
-              20세기 초반 오타루의 번영을 상징하는 수로로, 옛 석조 창고들을 따라 조성된 산책로에서 오타루 특유의 서정적이고 이국적인 분위기를 만끽할 수 있는 명소.
+              20세기 초반 오타루의 번영을 상징하는 수로로, 옛 석조 창고들을 따라 조성된 산책로에서 오타루 특유의
+              서정적이고 이국적인 분위기를 만끽할 수 있는 명소.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 오르골당 &amp; 과자거리</div>
             <div class="attraction-desc">
-              세계 각국의 오르골 수천 점이 전시된 박물관과 북해도를 대표하는 유명 디저트 샵들이 늘어선 거리로, 아기자기한 기념품 쇼핑과 달콤한 미식 체험이 동시에 가능한 곳.
+              세계 각국의 오르골 수천 점이 전시된 박물관과 북해도를 대표하는 유명 디저트 샵들이 늘어선 거리로,
+              아기자기한 기념품 쇼핑과 달콤한 미식 체험이 동시에 가능한 곳.
             </div>
           </div>
           <div class="attraction-item" style="margin-bottom: 0">
             <div class="attraction-title">■ 윙베이 오타루</div>
             <div class="attraction-desc">
-              오타루항 인근에 위치한 대형 복합 쇼핑 센터. 다양한 브랜드와 면세점, 레스토랑이 입점해 있어 투어의 마지막을 여유로운 쇼핑으로 마무리하기에 최적의 장소.
+              오타루항 인근에 위치한 대형 복합 쇼핑 센터. 다양한 브랜드와 면세점, 레스토랑이 입점해 있어 투어의 마지막을
+              여유로운 쇼핑으로 마무리하기에 최적의 장소.
             </div>
           </div>
         </div>
@@ -652,13 +928,15 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 오오도리 공원 &amp; 시계탑</div>
             <div class="attraction-desc">
-              삿포로의 심장부로 불리는 도심 속 녹지 공간과 130년 이상의 역사를 간직한 도시의 상징인 시계탑(외관)을 관람하며 삿포로의 역사와 현재를 느껴보는 코스.
+              삿포로의 심장부로 불리는 도심 속 녹지 공간과 130년 이상의 역사를 간직한 도시의 상징인 시계탑(외관)을
+              관람하며 삿포로의 역사와 현재를 느껴보는 코스.
             </div>
           </div>
           <div class="attraction-item" style="margin-bottom: 0">
             <div class="attraction-title">■ 이온 복합쇼핑몰</div>
             <div class="attraction-desc">
-              일본 현지인들에게도 사랑받는 대형 쇼핑몰로, 기념품은 물론 다양한 일본 브랜드와 생활 잡화를 합리적인 가격에 구매할 수 있는 쇼핑의 명소.
+              일본 현지인들에게도 사랑받는 대형 쇼핑몰로, 기념품은 물론 다양한 일본 브랜드와 생활 잡화를 합리적인 가격에
+              구매할 수 있는 쇼핑의 명소.
             </div>
           </div>
         </div>
@@ -676,13 +954,15 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 모이와야마 전망대</div>
             <div class="attraction-desc">
-              로프웨이를 타고 해발 531m 정상에서 삿포로 시가지와 멀리 이시카리 평야까지 한눈에 조망할 수 있는 전망 명소로, 탁 트인 시야와 함께 시원한 개방감을 선사하는 곳.
+              로프웨이를 타고 해발 531m 정상에서 삿포로 시가지와 멀리 이시카리 평야까지 한눈에 조망할 수 있는 전망
+              명소로, 탁 트인 시야와 함께 시원한 개방감을 선사하는 곳.
             </div>
           </div>
           <div class="attraction-item" style="margin-bottom: 0">
             <div class="attraction-title">■ 오오도리 공원 &amp; 시계탑</div>
             <div class="attraction-desc">
-              삿포로 시내의 랜드마크를 둘러보는 코스. 계절마다 다른 매력을 뽐내는 공원 산책과 함께 클래식한 붉은 지붕의 시계탑을 배경으로 기념사진 촬영이 가능한 코스.
+              삿포로 시내의 랜드마크를 둘러보는 코스. 계절마다 다른 매력을 뽐내는 공원 산책과 함께 클래식한 붉은 지붕의
+              시계탑을 배경으로 기념사진 촬영이 가능한 코스.
             </div>
           </div>
         </div>
@@ -700,19 +980,22 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 오타루 운하 &amp; 오르골당</div>
             <div class="attraction-desc">
-              오타루의 상징인 운하 산책과 함께 수만 점의 오르골이 선사하는 신비로운 멜로디를 감상하고, 북해도 유명 디저트가 가득한 과자거리를 즐기는 코스.
+              오타루의 상징인 운하 산책과 함께 수만 점의 오르골이 선사하는 신비로운 멜로디를 감상하고, 북해도 유명
+              디저트가 가득한 과자거리를 즐기는 코스.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 시로이코히비토 파크</div>
             <div class="attraction-desc">
-              삿포로의 명물 과자 '시로이코히비토'의 제조 과정을 견학하고 아름다운 영국식 정원을 감상할 수 있는 과자 테마파크로 가족 및 연인에게 인기 있는 명소.
+              삿포로의 명물 과자 '시로이코히비토'의 제조 과정을 견학하고 아름다운 영국식 정원을 감상할 수 있는 과자
+              테마파크로 가족 및 연인에게 인기 있는 명소.
             </div>
           </div>
           <div class="attraction-item" style="margin-bottom: 0">
             <div class="attraction-title">■ 시내 면세점</div>
             <div class="attraction-desc">
-              일본 여행의 필수 코스인 면세점에 방문하여 고품질의 일본 화장품, 건강식품, 생활용품 등을 합리적인 가격에 쇼핑할 수 있는 시간.
+              일본 여행의 필수 코스인 면세점에 방문하여 고품질의 일본 화장품, 건강식품, 생활용품 등을 합리적인 가격에
+              쇼핑할 수 있는 시간.
             </div>
           </div>
         </div>
@@ -730,19 +1013,22 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 히츠지가오카 전망대</div>
             <div class="attraction-desc">
-              "소년이여 야망을 가져라"로 유명한 클라크 박사의 동상이 있는 곳으로, 삿포로 시내와 광활한 목초지를 한눈에 담을 수 있는 탁 트인 조망 명소.
+              "소년이여 야망을 가져라"로 유명한 클라크 박사의 동상이 있는 곳으로, 삿포로 시내와 광활한 목초지를 한눈에
+              담을 수 있는 탁 트인 조망 명소.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 북해도 개척촌</div>
             <div class="attraction-desc">
-              메이지 시대부터 쇼와 시대 초기까지의 북해도 건축물을 복원해 놓은 야외 박물관으로, 당시의 생활상을 엿볼 수 있는 역사 문화 공간.
+              메이지 시대부터 쇼와 시대 초기까지의 북해도 건축물을 복원해 놓은 야외 박물관으로, 당시의 생활상을 엿볼 수
+              있는 역사 문화 공간.
             </div>
           </div>
           <div class="attraction-item" style="margin-bottom: 0">
             <div class="attraction-title">■ 오타루 오르골당 &amp; 과자거리</div>
             <div class="attraction-desc">
-              오후 시간에는 오타루로 이동하여 낭만적인 오르골당과 아기자기한 과자거리를 둘러보며 기항지 투어의 여유를 만끽하는 코스.
+              오후 시간에는 오타루로 이동하여 낭만적인 오르골당과 아기자기한 과자거리를 둘러보며 기항지 투어의 여유를
+              만끽하는 코스.
             </div>
           </div>
         </div>
@@ -760,19 +1046,22 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 삿포로 맥주 박물관</div>
             <div class="attraction-desc">
-              일본 맥주의 역사와 제조 공정을 한눈에 볼 수 있는 곳으로, 붉은 벽돌의 고풍스러운 외관과 함께 신선한 맥주 시음(유료)을 즐길 수 있는 삿포로의 명물.
+              일본 맥주의 역사와 제조 공정을 한눈에 볼 수 있는 곳으로, 붉은 벽돌의 고풍스러운 외관과 함께 신선한 맥주
+              시음(유료)을 즐길 수 있는 삿포로의 명물.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 삿포로 오오도리 공원</div>
             <div class="attraction-desc">
-              삿포로 도심 한복판을 가로지르는 대형 공원으로, TV타워를 배경으로 기념사진을 촬영하고 도심 속 여유로운 분위기를 즐기며 자유롭게 중식을 즐길 수 있는 코스.
+              삿포로 도심 한복판을 가로지르는 대형 공원으로, TV타워를 배경으로 기념사진을 촬영하고 도심 속 여유로운
+              분위기를 즐기며 자유롭게 중식을 즐길 수 있는 코스.
             </div>
           </div>
           <div class="attraction-item" style="margin-bottom: 0">
             <div class="attraction-title">■ 시내 면세점</div>
             <div class="attraction-desc">
-              삿포로 시내 관광과 쇼핑을 동시에 만족시키는 일정으로, 여행객들에게 필요한 다양한 면세 물품을 구매할 수 있는 마지막 정차지.
+              삿포로 시내 관광과 쇼핑을 동시에 만족시키는 일정으로, 여행객들에게 필요한 다양한 면세 물품을 구매할 수
+              있는 마지막 정차지.
             </div>
           </div>
         </div>
@@ -780,7 +1069,7 @@
 
       <!-- OO-PG Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/23, 오타루 (Day 2) - OO-PG ]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 파크골프</div>
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - OO-PG ]</div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(자유식/식비지급), 석식(선내)</span>
           <span>💪 코스 난이도 : 상</span>
@@ -788,21 +1077,24 @@
         </div>
         <div class="card-content">
           <div class="attraction-item">
-            <div class="attraction-title"><span style="font-size: 14px;">■ 야마구치 녹지 파크골프</span></div>
-            <div class="attraction-desc"><span style="font-size: 18px;">
-              </span><span style="font-size: 13px;">삿포로의 쾌적한 자연 속에 위치한 파크 골프장에서 즐기는 18홀 라운딩. 넓은 페어웨이와 잘 관리된 그린 위에서 진정한 스포츠의 즐거움을 느낄 수 있는 코스.</span>
+            <div class="attraction-title">■ 야마구치 녹지 파크골프</div>
+            <div class="attraction-desc">
+              삿포로의 쾌적한 자연 속에 위치한 파크 골프장에서 즐기는 18홀 라운딩. 넓은 페어웨이와 잘 관리된 그린 위에서
+              진정한 스포츠의 즐거움을 느낄 수 있는 코스.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 삿포로 맥주 박물관</div>
             <div class="attraction-desc">
-              일본 맥주의 역사와 제조 공정을 견학할 수 있는 삿포로의 상징적인 장소로, 붉은 벽돌 건물 특유의 고풍스러운 분위기를 배경으로 기념사진 촬영 가능.
+              일본 맥주의 역사와 제조 공정을 견학할 수 있는 삿포로의 상징적인 장소로, 붉은 벽돌 건물 특유의 고풍스러운
+              분위기를 배경으로 기념사진 촬영 가능.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 시내 면세점</div>
             <div class="attraction-desc">
-              여행객들에게 인기 있는 일본 가전, 화장품, 건강식품 등을 합리적인 가격에 구매할 수 있는 쇼핑 시간으로 기항지 관광의 즐거움을 더하는 일정.
+              여행객들에게 인기 있는 일본 가전, 화장품, 건강식품 등을 합리적인 가격에 구매할 수 있는 쇼핑 시간으로
+              기항지 관광의 즐거움을 더하는 일정.
             </div>
           </div>
           <div class="attraction-item" style="
@@ -822,7 +1114,7 @@
 
       <!-- OO-S Card -->
       <div class="course-card" style="margin-bottom: 0">
-        <div class="card-header">[ 6/23, 오타루 (Day 2) - OO-S ]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 온천(선착순)</div>
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - OO-S ]</div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
           <span>💪 코스 난이도 : 하</span>
@@ -832,19 +1124,22 @@
           <div class="attraction-item">
             <div class="attraction-title">■ 천연 온천욕 체험</div>
             <div class="attraction-desc">
-              여행의 피로를 말끔히 씻어낼 수 있는 온천욕 일정. 북해도의 맑은 물과 함께 즐기는 온천욕은 몸과 마음을 편안하게 이완시켜 주는 최고의 힐링 시간.
+              여행의 피로를 말끔히 씻어낼 수 있는 온천욕 일정. 북해도의 맑은 물과 함께 즐기는 온천욕은 몸과 마음을
+              편안하게 이완시켜 주는 최고의 힐링 시간.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 오타루 운하 산책</div>
             <div class="attraction-desc">
-              온천욕 후 즐기는 오타루 운하의 이국적인 풍경. 붉은 벽돌 창고를 배경으로 여유롭게 산책하며 기념사진을 남길 수 있는 오타루의 대표 관광 코스.
+              온천욕 후 즐기는 오타루 운하의 이국적인 풍경. 붉은 벽돌 창고를 배경으로 여유롭게 산책하며 기념사진을 남길
+              수 있는 오타루의 대표 관광 코스.
             </div>
           </div>
           <div class="attraction-item">
             <div class="attraction-title">■ 시내 면세점</div>
             <div class="attraction-desc">
-              삿포로/오타루 시내의 주요 면세점을 방문하여 기념품 및 선물을 구매할 수 있는 쇼핑 일정이 포함되어 투어의 만족도를 높입니다.
+              삿포로/오타루 시내의 주요 면세점을 방문하여 기념품 및 선물을 구매할 수 있는 쇼핑 일정이 포함되어 투어의
+              만족도를 높입니다.
             </div>
           </div>
           <div class="attraction-item" style="
@@ -856,61 +1151,13 @@
             ">
             <div class="attraction-title" style="color: #e65100">⚠️ 안내 사항</div>
             <div class="attraction-desc" style="padding-left: 0; color: #bf360c">
-              여유롭고 쾌적한 입욕 환경을 위해 선착순 36명 한정으로 진행되는 상품입니다. 개인 세면도구 지참을 권장합니다.
+              여유롭고 쾌적한 입욕 환경을 위해 선착순 36명 한정으로 진행되는 상품입니다. 개인 세면도구 지참을
+              권장합니다.
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Footer Table -->
-    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); border: 1px solid #e0e0e0;">
-      <div style="color: #f57f17; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; font-size: 16px;">
-        ⚠️ 상세 안내 및 주의사항 (Remarks)
-      </div>
-      
-      <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
-        <thead>
-          <tr>
-            <th style="background-color: #e3f2fd; color: #0d47a1; font-weight: 700; text-align: center; padding: 10px; border: 1px solid #bbdefb; width: 20%; font-size: 13px;">구분</th>
-            <th style="background-color: #e3f2fd; color: #0d47a1; font-weight: 700; text-align: center; padding: 10px; border: 1px solid #bbdefb; font-size: 13px;">내용</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #e0e0e0; vertical-align: top; font-weight: 700; background-color: #f5fafd; text-align: center; color: #1565c0; font-size: 13px;">포함내역</td>
-            <td style="padding: 10px; border: 1px solid #e0e0e0; vertical-align: top; line-height: 1.7; font-size: 13px;">
-              ■ 기항지관광, 전용차량, 크루즈 전문 인솔 가이드 동행, 여행지 입장료, 관광 프로그램 일정 내 식사
-            </td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #e0e0e0; vertical-align: top; font-weight: 700; background-color: #f5fafd; text-align: center; color: #1565c0; font-size: 13px;">불포함내역</td>
-            <td style="padding: 10px; border: 1px solid #e0e0e0; vertical-align: top; line-height: 1.7; font-size: 13px;">
-              ■ 자유일정, 일정에 포함되지 않은 식사 및 기타 개인 경비, 매너팁(자유) 등
-            </td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #e0e0e0; vertical-align: top; font-weight: 700; background-color: #f5fafd; text-align: center; color: #1565c0; font-size: 13px;">공통특전</td>
-            <td style="padding: 10px; border: 1px solid #e0e0e0; vertical-align: top; line-height: 1.7; font-size: 13px;">
-              ■ 배정된 전담 가이드가 승선부터 귀국까지 인솔 및 현지 가이드 서비스를 제공합니다.<br>
-              <span style="margin-left: 15px;">↳ 여행 전 해피콜, 승하선 수속 지원, 선내 시설 및 서비스 이용 안내, 각 기항지에서의 관광 안내 및 인솔</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #e0e0e0; vertical-align: top; font-weight: 700; background-color: #f5fafd; text-align: center; color: #1565c0; font-size: 13px;">주의사항</td>
-            <td style="padding: 10px; border: 1px solid #e0e0e0; vertical-align: top; line-height: 1.7; font-size: 13px;">
-              ■ 최소 출발 인원 35명 (인원 미달 시 추가 요금 발생 가능)<br>
-              ■ 기항지 두 곳 또는 세 곳을 패키지로 판매 (일부 기항지 선별 및 코스 변경 불가)<br>
-              ■ 일반 소비자용 취소료 약관과 동일하게 적용됩니다.<br>
-              ■ 기항지 투어 명단은 출발 3주 전까지 확정되어야 합니다.<br>
-              ■ 파크골프(H-PG, OO-PG): 본인 전용 채, 볼, 슈즈 지참 필수 / 선착순 30명 한정<br>
-              ■ 온천(OO-S): 쾌적한 입욕을 위해 선착순 36명 한정<br>
-              ■ 오타루 2일차 [OO3], [OO-PG] 코스는 <strong>자유 중식비(2,000엔)</strong>가 현찰로 지급됩니다.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   
 
 </body></html>
