@@ -346,6 +346,189 @@
         margin-bottom: 8px;
         line-height: 1.5;
       }
+
+      /* 모바일 반응형 스타일 */
+      @media (max-width: 768px) {
+        body {
+          padding: 15px;
+          font-size: 13px;
+        }
+
+        .header h1 {
+          font-size: 1.2rem;
+        }
+
+        .header h2 {
+          font-size: 0.8rem;
+        }
+
+        /* 패키지 가격표 모바일 최적화 */
+        .pricing-table {
+          display: block;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .pricing-table thead {
+          display: none;
+        }
+
+        .pricing-table tbody {
+          display: block;
+        }
+
+        .pricing-table tr {
+          display: block;
+          margin-bottom: 20px;
+          border: 2px solid #1976d2;
+          border-radius: 8px;
+          background: white;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .pricing-table td {
+          display: block;
+          text-align: left !important;
+          padding: 12px 15px !important;
+          border: none;
+          border-bottom: 1px solid #e0e0e0;
+          font-size: 13px !important;
+        }
+
+        .pricing-table td:last-child {
+          border-bottom: none;
+        }
+
+        .pricing-table td::before {
+          content: attr(data-label);
+          font-weight: 700;
+          color: #0d47a1;
+          display: block;
+          margin-bottom: 5px;
+          font-size: 11px;
+        }
+
+        .package-name {
+          background-color: #1976d2 !important;
+          color: white !important;
+          font-size: 16px !important;
+          text-align: center !important;
+        }
+
+        .package-name::before {
+          display: none;
+        }
+
+        /* 일정 테이블 모바일 최적화 */
+        .schedule-table,
+        .summary-table {
+          font-size: 12px;
+        }
+
+        .schedule-table th,
+        .summary-table th {
+          padding: 8px 5px;
+          font-size: 11px;
+        }
+
+        .schedule-table td,
+        .summary-table td {
+          padding: 8px 5px;
+          font-size: 12px;
+        }
+
+        /* 코스 카드 모바일 최적화 */
+        .course-card {
+          margin-bottom: 15px;
+        }
+
+        .card-header {
+          font-size: 13px;
+          padding: 10px 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .card-header span {
+          float: none !important;
+          text-align: left;
+          margin-top: 5px;
+        }
+
+        .card-info-row {
+          font-size: 11px;
+          padding: 6px 12px;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .card-content {
+          padding: 12px;
+        }
+
+        .attraction-title {
+          font-size: 13px;
+        }
+
+        .attraction-desc {
+          font-size: 12px;
+          padding-left: 10px;
+        }
+
+        /* 날짜 헤더 모바일 최적화 */
+        .date-header {
+          font-size: 13px;
+          padding: 8px 12px;
+        }
+
+        .date-header span[style*="float: right"] {
+          float: none !important;
+          display: block;
+          margin-top: 5px;
+          font-size: 11px;
+        }
+
+        /* 섹션 타이틀 */
+        h3.section-title {
+          font-size: 1rem;
+        }
+
+        /* 테이블 스크롤 힌트 */
+        .pricing-table tbody::after {
+          content: "← 좌우로 스크롤하세요 →";
+          display: block;
+          text-align: center;
+          padding: 10px;
+          color: #666;
+          font-size: 11px;
+          background-color: #f5f5f5;
+        }
+      }
+
+      /* 작은 모바일 (320px ~ 480px) */
+      @media (max-width: 480px) {
+        body {
+          padding: 10px;
+          font-size: 12px;
+        }
+
+        .header {
+          padding: 20px 15px;
+        }
+
+        .header h1 {
+          font-size: 1rem;
+        }
+
+        section {
+          padding: 15px;
+        }
+
+        .pricing-table td {
+          font-size: 12px !important;
+        }
+      }
     </style>
   </head>
   <body style="">
@@ -403,52 +586,51 @@
             </td>
           </tr>
           <tr class="course-list-row">
-            <td><span style="font-size: 12px;">오타루 Day 1</span><br><span style="font-weight: 400; font-size: 12px; color: rgb(102, 102, 102);">(6/22)</span></td>
+            <td><span style="font-size: 12px;">삿포로 Day 1</span><br><span style="font-weight: 400; font-size: 12px; color: rgb(102, 102, 102);">(6/22)</span></td>
             <td style="text-align: left">
               <div class="course-item">
-                <span style="font-size: 12px;">O1</span><span style="font-size: 12px;">
+                <span style="font-size: 12px;">S1</span><span style="font-size: 12px;">
                 오오도리 공원, 시계탑(외관), 이온 복합쇼핑몰
               </span></div>
               <div class="course-item">
-                <span style="font-size: 12px;">O2</span><span style="font-size: 12px;">
+                <span style="font-size: 12px;">S2</span><span style="font-size: 12px;">
                 오타루 운하, 오르골당 &amp; 과자거리, 윙베이 오타루
               </span></div>
               <div class="course-item">
-                <span style="font-size: 12px;">O3</span><span style="font-size: 12px;">
+                <span style="font-size: 12px;">S3</span><span style="font-size: 12px;">
                 모이와야마 전망대, 오오도리 공원, 시계탑(외관)
               </span></div>
               <div class="course-item">
-                <span style="font-size: 12px;">O4</span><span style="font-size: 12px;">
-                JR타워 전망대, 게 뷔페 석식 (성인 260,000원 / 소아 200,000원)
+                <span style="font-size: 12px;">S4</span><span style="font-size: 12px;">
+                JR타워 전망대, 게 뷔페 석식(차가운 게요리+다양한 뷔페식 가능))
               </span></div>
               <div class="course-item">
-                <span style="font-size: 12px;">O5</span><span style="font-size: 12px;">
-                시로이 코히비토 파크, TV타워, 오오도리 공원 (성인 200,000원 / 소아 160,000원)
-              </span></div>
+                <span style="font-size: 12px;">S5</span><span style="font-size: 12px;">
+                시로이 코히비토 파크, TV타워, 오오도리 공원&nbsp;</span></div>
             </td>
           </tr>
           <tr class="course-list-row">
-            <td><span style="font-size: 12px;">오타루 Day 2</span><br><span style="font-weight: 400; font-size: 12px; color: rgb(102, 102, 102);">(6/23)</span></td>
+            <td><span style="font-size: 12px;">삿포로 Day 2</span><br><span style="font-weight: 400; font-size: 12px; color: rgb(102, 102, 102);">(6/23)</span></td>
             <td style="text-align: left">
               <div class="course-item">
-                <span style="font-size: 12px;">OO1</span><span style="font-size: 12px;">
+                <span style="font-size: 12px;">SS1</span><span style="font-size: 12px;">
                 오타루 운하/오르골당, 시로이코히비토 파크, 시내 면세점&nbsp;&nbsp;
               </span></div>
               <div class="course-item">
-                <span style="font-size: 12px;">OO2</span><span style="font-size: 12px;">
+                <span style="font-size: 12px;">SS2</span><span style="font-size: 12px;">
                 히츠지가오카 전망대, 북해도 개척촌, 오르골당, 시내 면세점&nbsp;
               </span></div>
               <div class="course-item">
-                <span style="font-size: 12px;">OO3</span><span style="font-size: 12px;">
-                오타루 운하, 삿포로 맥주 박물관, 오오도리 공원, 시내 면세점&nbsp;
+                <span style="font-size: 12px;">SS3</span><span style="font-size: 12px;">
+                삿포로 맥주 박물관, 오오도리 공원, 구도청사(외관), 시내 면세점&nbsp;
               </span></div>
               <div class="course-item">
-                <span style="font-size: 12px;">OO-PG</span><span style="font-size: 12px;">
+                <span style="font-size: 12px;">SS-PG</span><span style="font-size: 12px;">
                 야마구치 녹지 파크 골프장(18H), 맥주 박물관, 시내 면세점&nbsp;&nbsp;
               </span></div>
               <div class="course-item">
-                <span style="font-size: 12px;">OO-S</span><span style="font-size: 12px;">
-                천연 온천욕, 오타루 운하, 시내 면세점&nbsp;&nbsp;
+                <span style="font-size: 12px;">SS-S</span><span style="font-size: 12px;">
+                천연 온천욕, 시내 면세점&nbsp;&nbsp;
               </span></div>
             </td>
           </tr>
@@ -479,10 +661,10 @@
               하코다테</span><br><span style="font-size: 12px; font-weight: 400;">(6/21)</span>
             </th>
             <th rowspan="2" width="9%" style="background-color: #e3f2fd; font-size: 12px; padding: 12px 8px"><span style="font-size: 12px;">
-              오타루1</span><br><span style="font-size: 12px; font-weight: 400;">(6/22)</span>
+              삿포로1</span><br><span style="font-size: 12px; font-weight: 400;">(6/22)</span>
             </th>
             <th rowspan="2" width="9%" style="background-color: #e3f2fd; font-size: 12px; padding: 12px 8px"><span style="font-size: 12px;">
-              오타루2</span><br><span style="font-size: 12px; font-weight: 400;">(6/23)</span>
+              삿포로2</span><br><span style="font-size: 12px; font-weight: 400;">(6/23)</span>
             </th>
             <th width="11%" style="background-color: #e3f2fd; color: #0d47a1; font-size: 12px; padding: 10px 8px"><span style="font-size: 12px;">
               성인
@@ -530,65 +712,49 @@
         <tbody>
           <tr>
             <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px"><span style="font-size: 12px;">
-              📦</span><br><span style="font-size: 12px;">패키지 1</span>
-            </td>
-            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+              📦</span><br><span style="font-size: 12px;">패키지 1<br>(베스트)</span></td>
+            <td data-label="테마 및 추천 대상" style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
               <strong style="color: #0d47a1; font-size: 12px"><span style="font-size: 12px;">[자연+도심+힐링]</span></strong><br><span style="font-size: 12px;">오오누마 국정공원과 삿포로 도심 관광</span>
             </td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">H1</span></td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">O1</span></td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">OO1</span></td>
-            <td class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">540,000</span></td>
-            <td class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">430,000</span></td>
-            <td rowspan="9" class="price-free" style="vertical-align: middle; padding: 12px 8px"><span style="font-size: 12px;">무료</span></td>
+            <td data-label="하코다테 (6/21)" style="padding: 12px 8px"><span style="font-size: 12px;">H1</span></td>
+            <td data-label="삿포로1 (6/22)" style="padding: 12px 8px"><span style="font-size: 12px;">S1</span></td>
+            <td data-label="삿포로2 (6/23)" style="padding: 12px 8px"><span style="font-size: 12px;">SS1</span></td>
+            <td data-label="성인 (12세 이상)" class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">540,000원</span></td>
+            <td data-label="소아 (3~12세)" class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">430,000원</span></td>
+            <td data-label="유아 (3세 미만)" rowspan="9" class="price-free" style="vertical-align: middle; padding: 12px 8px"><span style="font-size: 12px;">무료</span></td>
           </tr>
           <tr>
             <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px"><span style="font-size: 12px;">
               📦</span><br><span style="font-size: 12px;">패키지 2</span>
             </td>
-            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+            <td data-label="테마 및 추천 대상" style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
               <strong style="color: #0d47a1; font-size: 12px"><span style="font-size: 12px;">[역사+감성+전망]</span></strong><br><span style="font-size: 12px;">
               고료가쿠 타워와 오타루 낭만 코스</span>
             </td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">H2</span></td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">O2</span></td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">OO2</span></td>
-            <td class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">550,000</span></td>
-            <td class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">435,000</span></td>
+            <td data-label="하코다테 (6/21)" style="padding: 12px 8px"><span style="font-size: 12px;">H2</span></td>
+            <td data-label="삿포로1 (6/22)" style="padding: 12px 8px"><span style="font-size: 12px;">S2</span></td>
+            <td data-label="삿포로2 (6/23)" style="padding: 12px 8px"><span style="font-size: 12px;">SS2</span></td>
+            <td data-label="성인 (12세 이상)" class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">550,000원</span></td>
+            <td data-label="소아 (3~12세)" class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">435,000원</span></td>
           </tr>
           <tr>
             <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px"><span style="font-size: 12px;">
               📦</span><br><span style="font-size: 12px;">패키지 3</span><br><span style="font-size: 12px; color: rgb(255, 152, 0); font-weight: 600;">(세미팩)</span>
             </td>
-            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+            <td data-label="테마 및 추천 대상" style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
               <strong style="color: #0d47a1; font-size: 12px"><span style="font-size: 12px;">[자연+자유+맥주]</span></strong><br><span style="font-size: 12px;">
               첫날과 마지막 날 핵심 관광</span><br>
               <span style="color: rgb(102, 102, 102); font-size: 12px;">💑 추천: 커플, 여유파</span>
             </td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">H1</span></td>
-            <td style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px"><span style="font-size: 12px;">자유</span></td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">OO3</span></td>
-            <td class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">370,000</span></td>
-            <td class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">290,000</span></td>
+            <td data-label="하코다테 (6/21)" style="padding: 12px 8px"><span style="font-size: 12px;">H1</span></td>
+            <td data-label="삿포로1 (6/22)" style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px"><span style="font-size: 12px;">자유</span></td>
+            <td data-label="삿포로2 (6/23)" style="padding: 12px 8px"><span style="font-size: 12px;">SS3</span></td>
+            <td data-label="성인 (12세 이상)" class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">400,000원</span></td>
+            <td data-label="소아 (3~12세)" class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">315,000원</span></td>
           </tr>
           <tr>
             <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px"><span style="font-size: 12px;">
               📦</span><br><span style="font-size: 12px;">패키지 4</span><br><span style="font-size: 12px; color: rgb(255, 152, 0); font-weight: 600;">(세미팩)</span>
-            </td>
-            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
-              <strong style="color: #0d47a1; font-size: 12px"><span style="font-size: 12px;">[역사+도심+자유]</span></strong><br><span style="font-size: 12px;">
-              고료가쿠와 삿포로 도심 관광</span><br>
-              <span style="color: rgb(102, 102, 102); font-size: 12px;">🛍️ 추천: 실속파, 쇼핑</span>
-            </td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">H2</span></td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">O1</span></td>
-            <td style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px"><span style="font-size: 12px;">자유</span></td>
-            <td class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">350,000</span></td>
-            <td class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">280,000</span></td>
-          </tr>
-          <tr>
-            <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px"><span style="font-size: 12px;">
-              📦</span><br><span style="font-size: 12px;">패키지 5</span><br><span style="font-size: 12px; color: rgb(255, 152, 0); font-weight: 600;">(세미팩)</span>
             </td>
             <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
               <strong style="color: #0d47a1; font-size: 12px"><span style="font-size: 12px;">[자연+자유+힐링]</span></strong><br><span style="font-size: 12px;">
@@ -597,13 +763,42 @@
             </td>
             <td style="padding: 12px 8px"><span style="font-size: 12px;">H1</span></td>
             <td style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px"><span style="font-size: 12px;">자유</span></td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">OO1</span></td>
+            <td style="padding: 12px 8px"><span style="font-size: 12px;">SS1</span></td>
             <td class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">380,000</span></td>
             <td class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">300,000</span></td>
           </tr>
           <tr>
+            <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px"><span style="font-size: 12px;">
+              📦</span><br><span style="font-size: 12px;">패키지 5</span><br><span style="font-size: 12px; color: rgb(255, 152, 0); font-weight: 600;">(세미팩)</span>
+            </td>
+            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+              <strong style="color: #0d47a1; font-size: 12px"><span style="font-size: 12px;">[역사+도심+자유]</span></strong><br><span style="font-size: 12px;">
+              고료가쿠와 삿포로 도심 관광</span><br>
+              <span style="color: rgb(102, 102, 102); font-size: 12px;">🛍️ 추천: 실속파, 쇼핑</span>
+            </td>
+            <td style="padding: 12px 8px"><span style="font-size: 12px;">H2</span></td>
+            <td style="padding: 12px 8px"><span style="font-size: 12px;">S1</span></td>
+            <td style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px"><span style="font-size: 12px;">자유</span></td>
+            <td class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">350,000</span></td>
+            <td class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">280,000</span></td>
+          </tr>
+          <tr>
+            <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px"><span style="font-size: 12px;">
+              📦</span><br><span style="font-size: 12px;">패키지 6<br>(자유식)</span></td>
+            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
+              <strong style="color: #0d47a1; font-size: 12px"><span style="font-size: 12px;">[자연+삿포로 자유석식+전망]</span></strong><br><span style="font-size: 12px;">
+              오오누마와 삿포로 시내 투어 및 자유석식, 모이와야마 전망대</span><br>
+              <span style="color: rgb(102, 102, 102); font-size: 12px;">🍽️ 추천: 자유식 선호</span>
+            </td>
+            <td style="padding: 12px 8px"><span style="font-size: 12px;">H1</span></td>
+            <td style="padding: 12px 8px"><span style="font-size: 12px;">S5</span></td>
+            <td style="padding: 12px 8px"><span style="font-size: 12px;">SS2</span></td>
+            <td class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">590,000</span></td>
+            <td class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">465,000</span></td>
+          </tr>
+          <tr>
             <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px; background-color: #fff3e0"><span style="font-size: 12px;">
-              🦀</span><br><span style="font-size: 12px;">패키지 6</span><br><span style="font-size: 12px; color: rgb(230, 81, 0); font-weight: 600;">(게뷔페)</span>
+              🦀</span><br><span style="font-size: 12px;">패키지 7</span><br><span style="font-size: 12px; color: rgb(230, 81, 0); font-weight: 600;">(게뷔페)</span>
             </td>
             <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px; background-color: #fff3e0">
               <strong style="color: #e65100; font-size: 12px"><span style="font-size: 12px;">[자연+게뷔페+힐링]</span></strong><br><span style="font-size: 12px;">
@@ -611,25 +806,10 @@
               <span style="color: rgb(102, 102, 102); font-size: 12px;">🦀 추천: 미식가, 가족</span>
             </td>
             <td style="padding: 12px 8px; background-color: #fff3e0"><span style="font-size: 12px;">H1</span></td>
-            <td style="padding: 12px 8px; background-color: #fff3e0"><span style="font-size: 12px;">O4</span></td>
-            <td style="padding: 12px 8px; background-color: #fff3e0"><span style="font-size: 12px;">OO1</span></td>
+            <td style="padding: 12px 8px; background-color: #fff3e0"><span style="font-size: 12px;">S4</span></td>
+            <td style="padding: 12px 8px; background-color: #fff3e0"><span style="font-size: 12px;">SS1</span></td>
             <td class="price-adult" style="padding: 12px 8px; background-color: #fff3e0"><span style="font-size: 12px;">640,000</span></td>
             <td class="price-child" style="padding: 12px 8px; background-color: #fff3e0"><span style="font-size: 12px;">500,000</span></td>
-          </tr>
-          <tr>
-            <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px"><span style="font-size: 12px;">
-              📦</span><br><span style="font-size: 12px;">패키지 7</span>
-            </td>
-            <td style="text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 10px">
-              <strong style="color: #0d47a1; font-size: 12px"><span style="font-size: 12px;">[자연+삿포로 자유석식+전망]</span></strong><br><span style="font-size: 12px;">
-              오오누마와 삿포로 시내 투어 및 자유석식, 모이와야마 전망대</span><br>
-              <span style="color: rgb(102, 102, 102); font-size: 12px;">🍽️ 추천: 자유식 선호</span>
-            </td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">H1</span></td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">O5</span></td>
-            <td style="padding: 12px 8px"><span style="font-size: 12px;">OO2</span></td>
-            <td class="price-adult" style="padding: 12px 8px"><span style="font-size: 12px;">590,000</span></td>
-            <td class="price-child" style="padding: 12px 8px"><span style="font-size: 12px;">465,000</span></td>
           </tr>
           <tr>
             <td class="package-name" style="font-size: 13px; line-height: 1.4; padding: 15px 8px; background-color: #e8f5e9"><span style="font-size: 12px;">
@@ -641,8 +821,8 @@
               <span style="color: rgb(102, 102, 102); font-size: 12px;">♨️ 추천: 힐링파, 가족</span>
             </td>
             <td style="padding: 12px 8px; background-color: #e8f5e9"><span style="font-size: 12px;">H1</span></td>
-            <td style="padding: 12px 8px; background-color: #e8f5e9"><span style="font-size: 12px;">O1</span></td>
-            <td style="padding: 12px 8px; background-color: #e8f5e9"><span style="font-size: 12px;">OO-S</span></td>
+            <td style="padding: 12px 8px; background-color: #e8f5e9"><span style="font-size: 12px;">S1</span></td>
+            <td style="padding: 12px 8px; background-color: #e8f5e9"><span style="font-size: 12px;">SS-S</span></td>
             <td class="price-adult" style="padding: 12px 8px; background-color: #e8f5e9"><span style="font-size: 12px;">570,000</span></td>
             <td class="price-child" style="padding: 12px 8px; background-color: #e8f5e9"><span style="font-size: 12px;">450,000</span></td>
           </tr>
@@ -656,7 +836,7 @@
             </td>
             <td style="padding: 12px 8px; background-color: #e3f2fd"><span style="font-size: 12px;">H-PG</span></td>
             <td style="background-color: #fff9c4; font-weight: 600; color: #f57f17; padding: 12px 8px"><span style="font-size: 12px;">자유</span></td>
-            <td style="padding: 12px 8px; background-color: #e3f2fd"><span style="font-size: 12px;">OO-PG</span></td>
+            <td style="padding: 12px 8px; background-color: #e3f2fd"><span style="font-size: 12px;">SS-PG</span></td>
             <td class="price-adult" style="background-color: #e3f2fd; padding: 12px 8px"><span style="font-size: 12px;">530,000</span></td>
             <td class="price-child" style="background-color: #e3f2fd; padding: 12px 8px"><span style="font-size: 12px;">-</span></td>
           </tr>
@@ -666,6 +846,276 @@
 
     <!-- Part 5: Remarks -->
     <div class="content-container-orange">
+
+    <!-- 패키지 상세 일정 안내 (간결 버전) -->
+    <section>
+      <h3 class="section-title">📦 패키지 상세 일정 안내</h3>
+      <p style="color:#666;font-size:13px;margin-top:-15px;margin-bottom:25px;">※ 관광지별 상세 설명은 하단 '기항지관광 상세 설명' 섹션을 참조하세요</p>
+
+      <!-- 패키지 1 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;background:#fff;padding:16px 18px;margin-bottom:20px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between;">
+          <div>
+            <div style="font-weight:800;color:#0d47a1;font-size:15px;">패키지 1 | H1 + S1 + SS1</div>
+            <div style="color:#777;font-size:11px;margin-top:2px;">[자연+도심+힐링]</div>
+          </div>
+          <div style="text-align:right;min-width:210px;">
+            <div style="font-size:11px;color:#666;">판매가(1인)</div>
+            <div style="font-weight:800;color:#333;font-size:14px;">12세 이상 540,000원</div>
+            <div style="font-weight:700;color:#333;font-size:12px;">3~12세 430,000원 · 3세 미만 무료</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;border-top:1px dashed #dbeafe;padding-top:12px;display:grid;gap:10px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1565c0;min-width:150px;">6/21(토) 하코다테 · H1</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오오누마 국정공원 → 아카렌가 창고 → 선내 석식(재승선) → 로프웨이(야경)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1565c0;min-width:150px;">6/22(일) 삿포로 Day1 · S1</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오오도리 공원 &amp; 시계탑(외관) → 이온 복합쇼핑몰 → 귀선</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1565c0;min-width:150px;">6/23(월) 삿포로 Day2 · SS1</div>
+            <div style="color:#333;line-height:1.6;">오타루 운하/오르골당 → 현지식 중식 → 시로이코히비토 파크 → 시내 면세점 → 출항</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패키지 2 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;background:#fff;padding:16px 18px;margin-bottom:20px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between;">
+          <div>
+            <div style="font-weight:800;color:#0d47a1;font-size:15px;">패키지 2 | H2 + S2 + SS2</div>
+            <div style="color:#777;font-size:11px;margin-top:2px;">[역사+감성+전망]</div>
+          </div>
+          <div style="text-align:right;min-width:210px;">
+            <div style="font-size:11px;color:#666;">판매가(1인)</div>
+            <div style="font-weight:800;color:#333;font-size:14px;">12세 이상 550,000원</div>
+            <div style="font-weight:700;color:#333;font-size:12px;">3~12세 435,000원 · 3세 미만 무료</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;border-top:1px dashed #dbeafe;padding-top:12px;display:grid;gap:10px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1565c0;min-width:150px;">6/21(토) 하코다테 · H2</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 고료가쿠 타워/공원 → 아카렌가 창고 → 선내 석식(재승선) → 로프웨이(야경)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1565c0;min-width:150px;">6/22(일) 삿포로 Day1 · S2</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오타루 운하 → 오르골당 &amp; 과자거리 → 윙베이 오타루 → 귀선</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1565c0;min-width:150px;">6/23(월) 삿포로 Day2 · SS2</div>
+            <div style="color:#333;line-height:1.6;">히츠지가오카 전망대 → 북해도 개척촌 → 현지식 중식 → 오르골당 → 면세점 → 출항</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패키지 3 (세미팩) -->
+      <div style="border:1px solid #ff9800;border-radius:10px;background:#fffbf3;padding:16px 18px;margin-bottom:20px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between;">
+          <div>
+            <div style="font-weight:800;color:#e65100;font-size:15px;">패키지 3 (세미팩) | H1 + 자유 + SS3</div>
+            <div style="color:#777;font-size:11px;margin-top:2px;">[자연+자유+맥주] 💑 추천: 커플, 여유파</div>
+          </div>
+          <div style="text-align:right;min-width:210px;">
+            <div style="font-size:11px;color:#666;">판매가(1인)</div>
+            <div style="font-weight:800;color:#333;font-size:14px;">12세 이상 400,000원</div>
+            <div style="font-weight:700;color:#333;font-size:12px;">3~12세 315,000원 · 3세 미만 무료</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;border-top:1px dashed #ffe0b2;padding-top:12px;display:grid;gap:10px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/21(토) 하코다테 · H1</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오오누마 국정공원 → 아카렌가 창고 → 선내 석식(재승선) → 로프웨이(야경)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/22(일) 삿포로 Day1</div>
+            <div style="color:#f57f17;line-height:1.6;font-weight:600;">자유일정 (개인 자유활동)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/23(월) 삿포로 Day2 · SS3</div>
+            <div style="color:#333;line-height:1.6;">맥주 박물관 → 오오도리 공원 → 구도청사(외관) → 현지식 중식 → 시내 면세점 → 출항</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패키지 5 (세미팩) -->
+      <div style="border:1px solid #ff9800;border-radius:10px;background:#fffbf3;padding:16px 18px;margin-bottom:20px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between;">
+          <div>
+            <div style="font-weight:800;color:#e65100;font-size:15px;">패키지 4 (세미팩) | H1 + 자유 + SS1</div>
+            <div style="color:#777;font-size:11px;margin-top:2px;">[자연+자유+힐링] ⚡ 추천: 체력 안배 중시</div>
+          </div>
+          <div style="text-align:right;min-width:210px;">
+            <div style="font-size:11px;color:#666;">판매가(1인)</div>
+            <div style="font-weight:800;color:#333;font-size:14px;">12세 이상 380,000원</div>
+            <div style="font-weight:700;color:#333;font-size:12px;">3~12세 300,000원 · 3세 미만 무료</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;border-top:1px dashed #ffe0b2;padding-top:12px;display:grid;gap:10px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/21(토) 하코다테 · H1</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오오누마 국정공원 → 아카렌가 창고 → 선내 석식(재승선) → 로프웨이(야경)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/22(일) 삿포로 Day1</div>
+            <div style="color:#f57f17;line-height:1.6;font-weight:600;">자유일정 (개인 자유활동)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/23(월) 삿포로 Day2 · SS1</div>
+            <div style="color:#333;line-height:1.6;">오타루 운하/오르골당 → 현지식 중식 → 시로이코히비토 파크 → 시내 면세점 → 출항</div>
+          </div>
+        </div>
+      </div>
+      <!-- 패키지 4 (세미팩) -->
+      <div style="border:1px solid #ff9800;border-radius:10px;background:#fffbf3;padding:16px 18px;margin-bottom:20px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between;">
+          <div>
+            <div style="font-weight:800;color:#e65100;font-size:15px;">패키지 5 (세미팩) | H2 + S1 + 자유</div>
+            <div style="color:#777;font-size:11px;margin-top:2px;">[역사+도심+자유] 🛍️ 추천: 실속파, 쇼핑</div>
+          </div>
+          <div style="text-align:right;min-width:210px;">
+            <div style="font-size:11px;color:#666;">판매가(1인)</div>
+            <div style="font-weight:800;color:#333;font-size:14px;">12세 이상 350,000원</div>
+            <div style="font-weight:700;color:#333;font-size:12px;">3~12세 280,000원 · 3세 미만 무료</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;border-top:1px dashed #ffe0b2;padding-top:12px;display:grid;gap:10px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/21(토) 하코다테 · H2</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 고료가쿠 타워/공원 → 아카렌가 창고 → 선내 석식(재승선) → 로프웨이(야경)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/22(일) 삿포로 Day1 · S1</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오오도리 공원 &amp; 시계탑(외관) → 이온 복합쇼핑몰 → 귀선</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/23(월) 삿포로 Day2</div>
+            <div style="color:#f57f17;line-height:1.6;font-weight:600;">자유일정 (개인 자유활동)</div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 패키지 7 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;background:#fff;padding:16px 18px;margin-bottom:20px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between;">
+          <div>
+            <div style="font-weight:800;color:#0d47a1;font-size:15px;">패키지 6 | H1 + S5 + SS2</div>
+            <div style="color:#777;font-size:11px;margin-top:2px;">[자연+자유석식+전망] 🍽️ 추천: 자유식 선호</div>
+          </div>
+          <div style="text-align:right;min-width:210px;">
+            <div style="font-size:11px;color:#666;">판매가(1인)</div>
+            <div style="font-weight:800;color:#333;font-size:14px;">12세 이상 590,000원</div>
+            <div style="font-weight:700;color:#333;font-size:12px;">3~12세 465,000원 · 3세 미만 무료</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;border-top:1px dashed #dbeafe;padding-top:12px;display:grid;gap:10px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1565c0;min-width:150px;">6/21(토) 하코다테 · H1</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오오누마 국정공원 → 아카렌가 창고 → 선내 석식(재승선) → 로프웨이(야경)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1565c0;min-width:150px;">6/22(일) 삿포로 Day1 · S5</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 시로이 코히비토 파크 → TV타워 → 오오도리 공원 → <strong>자유 석식(2,000엔 지급)</strong> → 재승선</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1565c0;min-width:150px;">6/23(월) 삿포로 Day2 · SS2</div>
+            <div style="color:#333;line-height:1.6;">히츠지가오카 전망대 → 북해도 개척촌 → 현지식 중식 → 오르골당 → 면세점 → 출항</div>
+          </div>
+        </div>
+      </div>
+      <!-- 패키지 6 (게뷔페) -->
+      <div style="border:1px solid #f57c00;border-radius:10px;background:#fff8e1;padding:16px 18px;margin-bottom:20px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between;">
+          <div>
+            <div style="font-weight:800;color:#e65100;font-size:15px;">패키지 7 (게뷔페) | H1 + S4 + SS1</div>
+            <div style="color:#777;font-size:11px;margin-top:2px;">[자연+게뷔페+힐링] 🦀 추천: 미식가, 가족&nbsp; <u><span style="color: rgb(24, 14, 210);"><strong>※한국과는 다르게 일본은 게요리가 차갑게 제공됩니다.&nbsp;</strong></span></u></div>
+          </div>
+          <div style="text-align:right;min-width:210px;">
+            <div style="font-size:11px;color:#666;">판매가(1인)</div>
+            <div style="font-weight:800;color:#333;font-size:14px;">12세 이상 640,000원</div>
+            <div style="font-weight:700;color:#333;font-size:12px;">3~12세 500,000원 · 3세 미만 무료</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;border-top:1px dashed #ffe082;padding-top:12px;display:grid;gap:10px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/21(토) 하코다테 · H1</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오오누마 국정공원 → 아카렌가 창고 → 선내 석식(재승선) → 로프웨이(야경)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/22(일) 삿포로 Day1 · S4</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → JR타워 전망대 → <strong>게 뷔페 석식</strong> → 재승선</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#e65100;min-width:150px;">6/23(월) 삿포로 Day2 · SS1</div>
+            <div style="color:#333;line-height:1.6;">오타루 운하/오르골당 → 현지식 중식 → 시로이코히비토 파크 → 시내 면세점 → 출항</div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 패키지 8 (온천) -->
+      <div style="border:1px solid #66bb6a;border-radius:10px;background:#f1f8f4;padding:16px 18px;margin-bottom:20px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between;">
+          <div>
+            <div style="font-weight:800;color:#388e3c;font-size:15px;">패키지 8 (온천) | H1 + S1 + SS-S</div>
+            <div style="color:#777;font-size:11px;margin-top:2px;">[자연+도심+온천] ♨️ 추천: 힐링파, 가족</div>
+          </div>
+          <div style="text-align:right;min-width:210px;">
+            <div style="font-size:11px;color:#666;">판매가(1인)</div>
+            <div style="font-weight:800;color:#333;font-size:14px;">12세 이상 570,000원</div>
+            <div style="font-weight:700;color:#333;font-size:12px;">3~12세 450,000원 · 3세 미만 무료</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;border-top:1px dashed #c8e6c9;padding-top:12px;display:grid;gap:10px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#388e3c;min-width:150px;">6/21(토) 하코다테 · H1</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오오누마 국정공원 → 아카렌가 창고 → 선내 석식(재승선) → 로프웨이(야경)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#388e3c;min-width:150px;">6/22(일) 삿포로 Day1 · S1</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 오오도리 공원 &amp; 시계탑(외관) → 이온 복합쇼핑몰 → 귀선</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#388e3c;min-width:150px;">6/23(월) 삿포로 Day2 · SS-S</div>
+            <div style="color:#333;line-height:1.6;">천연 온천욕 → 현지식 중식 → 시내 면세점 → 출항 <span style="color:#d32f2f;font-size:11px;">(선착순 36명)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패키지 9 (파크골프) -->
+      <div style="border:1px solid #42a5f5;border-radius:10px;background:#e3f2fd;padding:16px 18px;margin-bottom:20px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between;">
+          <div>
+            <div style="font-weight:800;color:#1976d2;font-size:15px;">패키지 9 (파크골프) | H-PG + 자유 + SS-PG</div>
+            <div style="color:#777;font-size:11px;margin-top:2px;">[파크골프+자유+파크골프] ⛳ 추천: 동호회, 액티브 시니어</div>
+          </div>
+          <div style="text-align:right;min-width:210px;">
+            <div style="font-size:11px;color:#666;">판매가(1인)</div>
+            <div style="font-weight:800;color:#333;font-size:14px;">12세 이상 530,000원</div>
+            <div style="font-weight:700;color:#333;font-size:12px;">3~12세 미만 판매불가</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;border-top:1px dashed #bbdefb;padding-top:12px;display:grid;gap:10px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1976d2;min-width:150px;">6/21(토) 하코다테 · H-PG</div>
+            <div style="color:#333;line-height:1.6;">선내 중식 → 시노리 파크 골프장(18H) → 선내 석식(재승선) → 로프웨이(야경)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1976d2;min-width:150px;">6/22(일) 삿포로 Day1</div>
+            <div style="color:#f57f17;line-height:1.6;font-weight:600;">자유일정 (개인 자유활동)</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+            <div style="font-weight:800;color:#1976d2;min-width:150px;">6/23(월) 삿포로 Day2 · SS-PG</div>
+            <div style="color:#333;line-height:1.6;">야마구치 파크 골프장(18H) → 자유 중식(2,000엔 지급) → 맥주 박물관 → 면세점 → 출항 <span style="color:#d32f2f;font-size:11px;">(선착순 30명)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
       <div class="section-header-orange"><span style="font-size: 12px;">⚠️ 상세 안내 및 주의사항</span></div>
       <div style="padding: 20px">
         <table style="margin-bottom: 0">
@@ -712,8 +1162,8 @@
                 ■ 기항지 두 곳 또는 세 곳을 패키지로 판매 (일부 기항지 선별 및 코스 변경 불가)</span><br><span style="font-size: 12px;">
                 ■ 일반 소비자용 취소료 약관과 동일하게 적용됩니다.</span><br><span style="font-size: 12px;">
                 ■ 기항지 투어 명단은 출발 3주 전까지 확정되어야 합니다.</span><br><span style="font-size: 12px;">
-                ■ </span><strong><span style="font-size: 12px;">파크골프(H-PG, OO-PG)</span></strong><span style="font-size: 12px;">: 본인 전용 채, 볼, 슈즈 지참 필수 / 선착순 40명 한정 /&nbsp;</span><br><span style="font-size: 12px;">
-                ■ </span><strong><span style="font-size: 12px;">온천(OO-S)</span></strong><span style="font-size: 12px;">: 쾌적한 입욕을 위해 선착순 36명 한정</span><br><span style="font-size: 12px;">
+                ■ </span><strong><span style="font-size: 12px;">파크골프(H-PG, SS-PG)</span></strong><span style="font-size: 12px;">: 본인 전용 채, 볼, 슈즈 지참 필수 / 선착순 40명 한정 /&nbsp;</span><br><span style="font-size: 12px;">
+                ■ </span><strong><span style="font-size: 12px;">온천(SS-S)</span></strong><span style="font-size: 12px;">: 쾌적한 입욕을 위해 선착순 36명 한정</span><br><span style="font-size: 12px;">
                 ■ 일정중&nbsp;</span><strong><span style="font-size: 12px;">자유 중식비(2,000엔)는</span></strong><span style="font-size: 12px;">&nbsp;인솔자가 현장에서 사전에 현찰로 지급 해 드립니다.
               </span></td>
             </tr>
@@ -755,7 +1205,7 @@
         </tbody>
       </table>
 
-      <div class="date-header"><span style="font-size: 12px;">📍 6월 22일 (일) - 오타루 (Day 1) </span><span style="font-weight: 700; float: right; font-size: 12px;"><br></span></div>
+      <div class="date-header"><span style="font-size: 12px;">📍 6월 22일 (일) - 삿포로 (Day 1) </span><span style="font-weight: 700; float: right; font-size: 12px;"><br></span></div>
       <table class="schedule-table">
         <thead>
           <tr>
@@ -766,34 +1216,34 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong><span style="font-size: 12px;">[O1] 삿포로 도심</span></strong></td>
+            <td><strong><span style="font-size: 12px;">[S1] 삿포로 도심</span></strong></td>
             <td><span style="font-size: 12px;">선내 중식 → 오오도리 공원 &amp; 시계탑(외관) → 이온 복합쇼핑몰 → 귀선</span></td>
             <td><span style="font-size: 12px;">삿포로 핵심 관광과 쇼핑</span></td>
           </tr>
           <tr>
-            <td><strong><span style="font-size: 12px;">[O2] 오타루 감성</span></strong></td>
+            <td><strong><span style="font-size: 12px;">[S2] 오타루 감성</span></strong></td>
             <td><span style="font-size: 12px;">선내 중식 → 오타루 운하 → 오르골당 &amp; 과자거리 → 윙베이 오타루 → 귀선</span></td>
             <td><span style="font-size: 12px;">오타루의 낭만과 쇼핑</span></td>
           </tr>
           <tr>
-            <td><strong><span style="font-size: 12px;">[O3] 삿포로 전망</span></strong></td>
+            <td><strong><span style="font-size: 12px;">[S3] 삿포로 전망</span></strong></td>
             <td><span style="font-size: 12px;">선내 중식 → 모이와야마 전망대 → 오오도리 공원 &amp; 시계탑(외관) → 귀선</span></td>
             <td><span style="font-size: 12px;">시원한 전망과 시내 관광</span></td>
           </tr>
           <tr>
-            <td><strong><span style="font-size: 12px;">[O4] 삿포로 전망 + 미식</span></strong></td>
+            <td><strong><span style="font-size: 12px;">[S4] 삿포로 전망 + 미식</span></strong></td>
             <td><span style="font-size: 12px;">선내 중식 → 전용버스 탑승 → JR타워 전망대 → </span><strong><span style="font-size: 12px;">게 뷔페 석식</span></strong><span style="font-size: 12px;"> → 크루즈 재승선</span></td>
             <td><strong><span style="font-size: 12px;">게 뷔페 석식*<br></span></strong></td>
           </tr>
           <tr>
-            <td><strong><span style="font-size: 12px;">[O5] 삿포로 도심 + 자유석식</span></strong></td>
+            <td><strong><span style="font-size: 12px;">[S5] 삿포로 도심 + 자유석식</span></strong></td>
             <td><span style="font-size: 12px;">선내 중식 → 시로이 코히비토 파크 → TV타워 → 오오도리 공원 → </span><strong><span style="font-size: 12px;">자유 석식(2,000엔 지급)</span></strong><span style="font-size: 12px;"> → 재승선</span></td>
             <td><strong><span style="font-size: 12px;">자유 석식*</span></strong></td>
           </tr>
         </tbody>
       </table>
 
-      <div class="date-header"><span style="font-size: 12px;">📍 6월 23일 (월) - 오타루 (Day 2)&nbsp;</span></div>
+      <div class="date-header"><span style="font-size: 12px;">📍 6월 23일 (월) - 삿포로 (Day 2)&nbsp;</span></div>
       <table class="schedule-table">
         <thead>
           <tr>
@@ -804,30 +1254,30 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>[OO1] 오타루&amp;시로이</strong></td>
+            <td><strong>[SS1] 오타루&amp;시로이</strong></td>
             <td>오타루 운하/오르골당 → <strong>현지식 중식</strong> → 시로이코히비토 파크 → 면세점 → 출항</td>
             <td><strong>현지식 중식*</strong></td>
           </tr>
           <tr>
-            <td><strong>[OO2] 전망&amp;역사</strong></td>
+            <td><strong>[SS2] 전망&amp;역사</strong></td>
             <td>히츠지가오카 전망대 → 북해도 개척촌 → <strong>현지식 중식</strong> → 오르골당 → 면세점 → 출항</td>
             <td><strong>현지식 중식*</strong></td>
           </tr>
           <tr>
-            <td><strong>[OO3] 맥주&amp;도심</strong></td>
+            <td><strong>[SS3] 맥주&amp;도심</strong></td>
             <td>
-              오타루 운하 → 맥주 박물관 → <strong>자유 중식(2,000엔 지급)</strong> → 오오도리 공원 → 면세점 → 출항
+              맥주 박물관 → 오오도리 공원 → 구도청사(외관) → <strong>현지식 중식</strong> → 시내 면세점 → 출항
             </td>
-            <td><strong>자유 중식*</strong></td>
+            <td><strong>현지식 중식*</strong></td>
           </tr>
           <tr>
-            <td><strong>[OO-PG] 파크골프(삿포로)</strong></td>
+            <td><strong>[SS-PG] 파크골프(삿포로)</strong></td>
             <td>야마구치 파크 골프장(18H) → <strong>자유 중식(2,000엔 지급)</strong> → 맥주 박물관 → 면세점 → 출항</td>
             <td><strong>자유 중식*</strong> / 선착순 30명</td>
           </tr>
           <tr>
-            <td><strong>[OO-S] 온천 힐링</strong></td>
-            <td>온천욕 → <strong>현지식 중식</strong> → 오타루 운하 → 시내 면세점 → 출항</td>
+            <td><strong>[SS-S] 온천 힐링</strong></td>
+            <td>온천욕 → <strong>현지식 중식</strong> → 시내 면세점 → 출항</td>
             <td><strong>현지식 중식*</strong> / 선착순 36명</td>
           </tr>
         </tbody>
@@ -840,7 +1290,7 @@
 
       <!-- H1 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/21, 하코다테 - H1 ] <span style="float: right; font-size: 12px">💰 성인 180,000원 / 소아 140,000원</span></div>
+        <div class="card-header">[ 6/21, 하코다테 - H1 ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
           <span>💪 코스 난이도 : 중</span>
@@ -873,7 +1323,7 @@
 
       <!-- H2 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/21, 하코다테 - H2 ] <span style="float: right; font-size: 12px">💰 성인 190,000원 / 소아 150,000원</span></div>
+        <div class="card-header">[ 6/21, 하코다테 - H2 ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
           <span>💪 코스 난이도 : 중</span>
@@ -906,7 +1356,7 @@
 
       <!-- H-PG Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/21, 하코다테 - H-PG ] <span style="float: right; font-size: 12px">💰 성인 280,000원</span></div>
+        <div class="card-header">[ 6/21, 하코다테 - H-PG ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
           <span>💪 코스 난이도 : 상</span>
@@ -942,9 +1392,9 @@
           </div>
         </div>
       </div>
-      <!-- O1 Card -->
+      <!-- S1 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/22, 오타루 (Day 1) - O1 ] <span style="float: right; font-size: 12px">💰 성인 160,000원 / 소아 130,000원</span></div>
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S1 ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
           <span>💪 코스 난이도 : 하</span>
@@ -968,9 +1418,9 @@
         </div>
       </div>
 
-      <!-- O2 Card -->
+      <!-- S2 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/22, 오타루 (Day 1) - O2 ] <span style="float: right; font-size: 12px">💰 성인 150,000원 / 소아 120,000원</span></div>
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S2 ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
           <span>💪 코스 난이도 : 하</span>
@@ -1002,9 +1452,9 @@
       </div>
 
 
-      <!-- O3 Card -->
+      <!-- S3 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/22, 오타루 (Day 1) - O3 ] <span style="float: right; font-size: 12px">💰 성인 180,000원 / 소아 140,000원</span></div>
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S3 ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
           <span>💪 코스 난이도 : 중</span>
@@ -1027,9 +1477,9 @@
           </div>
         </div>
       </div>
-      <!-- O4 Card -->
+      <!-- S4 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/22, 오타루 (Day 1) - O4 ] 모두투어 <span style="float: right; font-size: 12px">💰 성인 260,000원 / 소아 200,000원</span></div>
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S4 ] 모두투어 <span style="float: right; font-size: 12px">🍽️&nbsp; 석식(게 뷔페)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(XXX), 석식(게 뷔페)</span>
           <span>💪 코스 난이도 : 하</span>
@@ -1047,15 +1497,14 @@
             <div class="attraction-title">■ 게 뷔페 석식</div>
             <div class="attraction-desc">
               북해도의 신선한 킹크랩, 대게, 모리게 등 다양한 게 요리를 무제한으로 즐길 수 있는 특별 뷔페 식사. 
-              여행의 하이라이트가 될 최고급 미식 체험 시간.
-            </div>
+              여행의 하이라이트가 될 최고급 미식 체험 시간. ※ 일본은 <u>게요리가 차가워야 단맛이 극대화된다고 생각해서 차갑게 제공</u>됩니다.&nbsp;</div>
           </div>
         </div>
       </div>
 
-      <!-- O5 Card -->
+      <!-- S5 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/22, 오타루 (Day 1) - O5 ] 모두투어 <span style="float: right; font-size: 12px">💰 성인 200,000원 / 소아 160,000원</span></div>
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S5 ] 모두투어 <span style="float: right; font-size: 12px">🍽️ 석식(자유식/2,000엔 지급)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(XXX), 석식(자유식/2,000엔 지급)</span>
           <span>💪 코스 난이도 : 하</span>
@@ -1087,9 +1536,9 @@
       </div>
 
 
-      <!-- OO1 Card -->
+      <!-- SS1 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/23, 오타루 (Day 2) - OO1 ] <span style="float: right; font-size: 12px">💰 성인 200,000원 / 소아 160,000원</span></div>
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS1 ] <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
           <span>💪 코스 난이도 : 하</span>
@@ -1120,9 +1569,9 @@
         </div>
       </div>
 
-      <!-- OO2 Card -->
+      <!-- SS2 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/23, 오타루 (Day 2) - OO2 ] <span style="float: right; font-size: 12px">💰 성인 210,000원 / 소아 165,000원</span></div>
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS2 ] <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
           <span>💪 코스 난이도 : 중</span>
@@ -1153,12 +1602,12 @@
         </div>
       </div>
 
-      <!-- OO3 Card -->
+      <!-- SS3 Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/23, 오타루 (Day 2) - OO3 ] <span style="float: right; font-size: 12px">💰 성인 190,000원 / 소아 150,000원</span></div>
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS3 ] <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span></div>
         <div class="card-info-row">
-          <span>🍽️ 식사 : 중식(자유식/식비지급), 석식(선내)</span>
-          <span>💪 코스 난이도 : 하</span>
+          <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
+          <span>💪 코스 난이도 : 중</span>
           <span>⏱️ 소요시간 : 약 7~8시간</span>
         </div>
         <div class="card-content">
@@ -1170,10 +1619,16 @@
             </div>
           </div>
           <div class="attraction-item">
-            <div class="attraction-title">■ 삿포로 오오도리 공원</div>
+            <div class="attraction-title">■ 오오도리 공원</div>
             <div class="attraction-desc">
               삿포로 도심 한복판을 가로지르는 대형 공원으로, TV타워를 배경으로 기념사진을 촬영하고 도심 속 여유로운
-              분위기를 즐기며 자유롭게 중식을 즐길 수 있는 코스.
+              분위기를 즐기는 코스.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 구도청사(외관)</div>
+            <div class="attraction-desc">
+              붉은 벽돌로 지어진 역사적 건축물로 홋카이도의 상징. 외관 관람 및 사진 촬영 후 현지식 중식을 즐기는 일정.
             </div>
           </div>
           <div class="attraction-item" style="margin-bottom: 0">
@@ -1186,9 +1641,9 @@
         </div>
       </div>
 
-      <!-- OO-PG Card -->
+      <!-- SS-PG Card -->
       <div class="course-card">
-        <div class="card-header">[ 6/23, 오타루 (Day 2) - OO-PG ] <span style="float: right; font-size: 12px">💰 성인 250,000원</span></div>
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS-PG ] <span style="float: right; font-size: 12px">🍽️ 중식(자유식/2,000엔 지급)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(자유식/식비지급), 석식(선내)</span>
           <span>💪 코스 난이도 : 상</span>
@@ -1231,9 +1686,9 @@
         </div>
       </div>
 
-      <!-- OO-S Card -->
+      <!-- SS-S Card -->
       <div class="course-card" style="margin-bottom: 0">
-        <div class="card-header">[ 6/23, 오타루 (Day 2) - OO-S ] <span style="float: right; font-size: 12px">💰 성인 230,000원 / 소아 180,000원</span></div>
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS-S ] <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span></div>
         <div class="card-info-row">
           <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
           <span>💪 코스 난이도 : 하</span>
@@ -1248,16 +1703,9 @@
             </div>
           </div>
           <div class="attraction-item">
-            <div class="attraction-title">■ 오타루 운하 산책</div>
-            <div class="attraction-desc">
-              온천욕 후 즐기는 오타루 운하의 이국적인 풍경. 붉은 벽돌 창고를 배경으로 여유롭게 산책하며 기념사진을 남길
-              수 있는 오타루의 대표 관광 코스.
-            </div>
-          </div>
-          <div class="attraction-item">
             <div class="attraction-title">■ 시내 면세점</div>
             <div class="attraction-desc">
-              삿포로/오타루 시내의 주요 면세점을 방문하여 기념품 및 선물을 구매할 수 있는 쇼핑 일정이 포함되어 투어의
+              온천욕 후 삿포로/오타루 시내의 주요 면세점을 방문하여 기념품 및 선물을 구매할 수 있는 쇼핑 일정이 포함되어 투어의
               만족도를 높입니다.
             </div>
           </div>
@@ -1279,5 +1727,5 @@
     </section>
   
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9be333f0bae130fe","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9c0ddce9280603cc","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body></html>
