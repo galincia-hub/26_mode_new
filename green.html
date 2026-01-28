@@ -1,0 +1,2282 @@
+
+<!DOCTYPE html>
+<html lang="ko" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두투어 한일전세선 기항지 관광 종합 안내서</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+      body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px;
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        font-size: 14px;
+      }
+
+      /* Header Section */
+      .header {
+        background: linear-gradient(135deg, #0d47a1, #1e88e5, #4fc3f7);
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-logo-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .cruise-badge {
+        background: linear-gradient(135deg, #66bb6a, #43a047);
+        display: inline-block;
+        padding: 5px 16px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+        font-size: 11px;
+        font-weight: 600;
+        color: white;
+        letter-spacing: 0.3px;
+      }
+
+      .header h1 {
+        margin: 10px 0 0 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        letter-spacing: 0.5px;
+      }
+
+      .header h2 {
+        margin: 6px 0 0 0;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #e3f2fd;
+        opacity: 0.9;
+      }
+
+      /* Section Styling */
+      section {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        border: 1px solid #e0e0e0;
+      }
+
+      h3.section-title {
+        color: #0d47a1;
+        border-bottom: 3px solid #1e88e5;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 0;
+      }
+
+      /* Content Container for Part 4 & 5 */
+      .content-container {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid #0d47a1;
+        margin-bottom: 30px;
+      }
+
+      .content-container-orange {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e65100;
+        margin-bottom: 30px;
+      }
+
+      .section-header-blue {
+        background-color: #0d47a1;
+        color: white;
+        padding: 12px 20px;
+        font-weight: 700;
+        font-size: 16px;
+        border-bottom: 1px solid #0a357a;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .section-header-orange {
+        background-color: #ff6f00;
+        color: white;
+        padding: 12px 20px;
+        font-weight: 700;
+        font-size: 16px;
+        border-bottom: 1px solid #e65100;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* Tables */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 0;
+        font-size: 13px;
+      }
+
+      th {
+        background-color: #e3f2fd;
+        color: #0d47a1;
+        font-weight: 700;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #bbdefb;
+        font-size: 13px;
+      }
+
+      td {
+        padding: 10px;
+        border: 1px solid #e0e0e0;
+        vertical-align: middle;
+        font-size: 13px;
+      }
+
+      /* Course Code Badges */
+      .course-code {
+        color: #d32f2f;
+        font-weight: 700;
+        background-color: #ffebee;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-right: 5px;
+        display: inline-block;
+        min-width: 45px;
+        text-align: center;
+      }
+
+      /* Part 1 Table Specifics */
+      .summary-table td:first-child {
+        background-color: #f5fafd;
+        font-weight: 700;
+        text-align: center;
+        width: 20%;
+        color: #1565c0;
+      }
+
+      /* Part 2 Date Sections */
+      .date-header {
+        background-color: #1565c0;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 6px;
+        margin: 20px 0 10px 0;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .schedule-table th {
+        background-color: #f0f7ff;
+        color: #333;
+        border-color: #dbeafe;
+      }
+
+      .schedule-table tr:nth-child(even) {
+        background-color: #fafbfc;
+      }
+
+      /* Part 3 Course Cards */
+      .course-card {
+        background: linear-gradient(to bottom right, #ffffff, #f8fbff);
+        border: 1px solid #bbdefb;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .card-header {
+        background: #1976d2;
+        color: white;
+        padding: 10px 18px;
+        font-weight: 700;
+        font-size: 15px;
+      }
+
+      .card-info-row {
+        background-color: #e3f2fd;
+        padding: 8px 18px;
+        border-bottom: 1px solid #bbdefb;
+        font-size: 12px;
+        color: #0d47a1;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .card-content {
+        padding: 18px;
+      }
+
+      .attraction-item {
+        margin-bottom: 12px;
+      }
+
+      .attraction-title {
+        color: #0277bd;
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .attraction-desc {
+        color: #555;
+        line-height: 1.6;
+        padding-left: 20px;
+        font-size: 13px;
+      }
+
+      /* Pricing Table Styles */
+      .pricing-table th {
+        background-color: #e3f2fd;
+      }
+
+      .pricing-table td {
+        text-align: center;
+      }
+
+      .package-name {
+        font-weight: 700;
+        background-color: #fafafa;
+      }
+
+      .price-adult,
+      .price-child,
+      .price-free {
+        background-color: white;
+        color: #333;
+      }
+
+      .price-adult {
+        font-weight: 600;
+      }
+      .price-free {
+        font-weight: 600;
+      }
+
+      /* Footer Notes for Pricing */
+      .footer-notes {
+        padding: 20px;
+        background-color: #fff;
+        border-top: 2px solid #0d47a1;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .note-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+      }
+
+      .note-cell {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-weight: 600;
+      }
+
+      .note-list {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        color: #1565c0;
+      }
+
+      .note-list li {
+        margin-bottom: 5px;
+        padding-left: 15px;
+        position: relative;
+      }
+
+      .note-list li::before {
+        content: '※';
+        position: absolute;
+        left: 0;
+        color: #1565c0;
+      }
+
+      .main-note {
+        color: #1565c0;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      /* Course List Styles for Part 4 */
+      .course-list-row td:first-child {
+        background-color: #f5fafd;
+        font-weight: 700;
+        text-align: center;
+        color: #1565c0;
+        width: 15%;
+        white-space: nowrap;
+      }
+
+      .course-item {
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+
+      /* 모바일 반응형 스타일 */
+      @media (max-width: 768px) {
+        body {
+          padding: 15px;
+          font-size: 13px;
+        }
+
+        .header h1 {
+          font-size: 1.2rem;
+        }
+
+        .header h2 {
+          font-size: 0.8rem;
+        }
+
+        /* 패키지 가격표 모바일 최적화 */
+        .pricing-table {
+          display: block;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .pricing-table thead {
+          display: none;
+        }
+
+        .pricing-table tbody {
+          display: block;
+        }
+
+        .pricing-table tr {
+          display: block;
+          margin-bottom: 20px;
+          border: 2px solid #1976d2;
+          border-radius: 8px;
+          background: white;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .pricing-table td {
+          display: block;
+          text-align: left !important;
+          padding: 12px 15px !important;
+          border: none;
+          border-bottom: 1px solid #e0e0e0;
+          font-size: 13px !important;
+        }
+
+        .pricing-table td:last-child {
+          border-bottom: none;
+        }
+
+        .pricing-table td::before {
+          content: attr(data-label);
+          font-weight: 700;
+          color: #0d47a1;
+          display: block;
+          margin-bottom: 5px;
+          font-size: 11px;
+        }
+
+        .package-name {
+          background-color: #1976d2 !important;
+          color: white !important;
+          font-size: 16px !important;
+          text-align: center !important;
+        }
+
+        .package-name::before {
+          display: none;
+        }
+
+        /* 일정 테이블 모바일 최적화 */
+        .schedule-table,
+        .summary-table {
+          font-size: 12px;
+        }
+
+        .schedule-table th,
+        .summary-table th {
+          padding: 8px 5px;
+          font-size: 11px;
+        }
+
+        .schedule-table td,
+        .summary-table td {
+          padding: 8px 5px;
+          font-size: 12px;
+        }
+
+        /* 코스 카드 모바일 최적화 */
+        .course-card {
+          margin-bottom: 15px;
+        }
+
+        .card-header {
+          font-size: 13px;
+          padding: 10px 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .card-header span {
+          float: none !important;
+          text-align: left;
+          margin-top: 5px;
+        }
+
+        .card-info-row {
+          font-size: 11px;
+          padding: 6px 12px;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .card-content {
+          padding: 12px;
+        }
+
+        .attraction-title {
+          font-size: 13px;
+        }
+
+        .attraction-desc {
+          font-size: 12px;
+          padding-left: 10px;
+        }
+
+        /* 날짜 헤더 모바일 최적화 */
+        .date-header {
+          font-size: 13px;
+          padding: 8px 12px;
+        }
+
+        .date-header span[style*="float: right"] {
+          float: none !important;
+          display: block;
+          margin-top: 5px;
+          font-size: 11px;
+        }
+
+        /* 섹션 타이틀 */
+        h3.section-title {
+          font-size: 1rem;
+        }
+
+        /* 테이블 스크롤 힌트 */
+        .pricing-table tbody::after {
+          content: "← 좌우로 스크롤하세요 →";
+          display: block;
+          text-align: center;
+          padding: 10px;
+          color: #666;
+          font-size: 11px;
+          background-color: #f5f5f5;
+        }
+      }
+
+      /* 작은 모바일 (320px ~ 480px) */
+      @media (max-width: 480px) {
+        body {
+          padding: 10px;
+          font-size: 12px;
+        }
+
+        .header {
+          padding: 20px 15px;
+        }
+
+        .header h1 {
+          font-size: 1rem;
+        }
+
+        section {
+          padding: 15px;
+        }
+
+        .pricing-table td {
+          font-size: 12px !important;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <!-- Header -->
+    <div class="header">
+      <!-- Logo Section -->
+      <div class="header-logo-area">
+        <img src="https://www.modetour.com/images/common/logo.png" alt="모두투어 로고" style="height: 28px; filter: brightness(0) invert(1); display: none" onerror="this.style.display = 'none'" data-height-listener-added="true">
+      </div>
+
+      <!-- Cruise Info Badge -->
+      <div class="cruise-badge">2026년 6월 19일 부산출발 한일크루즈</div>
+
+      <!-- Main Title -->
+      <h1>모두의 크루즈 기항지 안내서</h1>
+      <h2>하코다테 &amp; 오타루 2일 특별 투어 프로그램</h2>
+      <div style="margin-top: 12px; padding: 8px 15px; background: rgba(102, 187, 106, 0.2); border-radius: 8px; border: 1px solid rgba(102, 187, 106, 0.4);">
+        <span style="font-size: 13px; color: #e8f5e9; font-weight: 600;">🌿 환경재단 전용 상품 포함</span>
+      </div>
+    </div>
+
+    <!-- Part 4: Package Pricing -->
+    <div class="content-container">
+      <div class="section-header-blue">📦 기항지 상품 안내</div>
+
+      <!-- Course Schedule -->
+      <div style="
+          background-color: #f5f5f5;
+          padding: 10px 15px;
+          border-bottom: 1px solid #dcdcdc;
+          font-weight: 700;
+          color: #333;
+        ">
+        1. 기항지 관광 간략 코스 안내</div>
+      <table>
+        <thead>
+          <tr>
+            <th width="20%">기항지</th>
+            <th>주요 관광 코스</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="course-list-row">
+            <td>하코다테<br><span style="font-weight: 400; font-size: 12px; color: rgb(102, 102, 102);">(6/21)</span></td>
+            <td style="text-align: left">
+              <div class="course-item">
+                <span style="font-size: 12px;">H1</span><span style="font-size: 12px;">
+                오오누마 국정공원, 아카렌가 창고, 하코다테 로프웨이(야경)
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">H2</span><span style="font-size: 12px;">
+                고료가쿠 타워/공원, 아카렌가 창고, 하코다테 로프웨이(야경)
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">H-PG</span><span style="font-size: 12px;">
+                시노리 파크 골프장(18H), 하코다테 로프웨이(야경)
+              </span></div>
+              <div class="course-item" style="background-color: #e8f5e9; padding: 4px 8px; margin-top: 8px; border-left: 3px solid #66bb6a;">
+                <span style="font-size: 12px; color: #2e7d32; font-weight: 600;">🌿 H11 [환경재단]</span><span style="font-size: 12px;">
+                모토마치 공원 → 하코다테 온천 체험 (타올 제공)
+              </span></div>
+              <div class="course-item" style="background-color: #e8f5e9; padding: 4px 8px; margin-top: 4px; border-left: 3px solid #66bb6a;">
+                <span style="font-size: 12px; color: #2e7d32; font-weight: 600;">🌿 H12 [환경재단]</span><span style="font-size: 12px;">
+                모토마치 공원 → 하코다테 로프웨이 → 아카렌가 창고 쇼핑
+              </span></div>
+            </td>
+          </tr>
+          <tr class="course-list-row">
+            <td><span style="font-size: 12px;">삿포로 Day 1</span><br><span style="font-weight: 400; font-size: 12px; color: rgb(102, 102, 102);">(6/22)</span></td>
+            <td style="text-align: left">
+              <div class="course-item">
+                <span style="font-size: 12px;">S1</span><span style="font-size: 12px;">
+                오오도리 공원, 시계탑(외관), 이온 복합쇼핑몰
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">S2</span><span style="font-size: 12px;">
+                오타루 운하, 오르골당 &amp; 과자거리, 윙베이 오타루
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">S3</span><span style="font-size: 12px;">
+                모이와야마 전망대, 오오도리 공원, 시계탑(외관)
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">S4</span><span style="font-size: 12px;">
+                JR타워 전망대, 게 뷔페 석식(차가운 게요리+다양한 뷔페식 가능))
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">S5</span><span style="font-size: 12px;">
+                시로이 코히비토 파크, TV타워, 오오도리 공원&nbsp;</span></div>
+              <div class="course-item" style="background-color: #e8f5e9; padding: 4px 8px; margin-top: 8px; border-left: 3px solid #66bb6a;">
+                <span style="font-size: 12px; color: #2e7d32; font-weight: 600;">🌿 S11 [환경재단]</span><span style="font-size: 12px;">
+                텐구산 로프웨이 → 오타루 오르골당 & 과자거리 → 오타루 운하
+              </span></div>
+              <div class="course-item" style="background-color: #e8f5e9; padding: 4px 8px; margin-top: 4px; border-left: 3px solid #66bb6a;">
+                <span style="font-size: 12px; color: #2e7d32; font-weight: 600;">🌿 S12 [환경재단]</span><span style="font-size: 12px;">
+                카무이 미사키 트래킹 → 미사키노유 온천 → 오타루 창고 NO.1
+              </span></div>
+              <div class="course-item" style="background-color: #e8f5e9; padding: 4px 8px; margin-top: 4px; border-left: 3px solid #66bb6a;">
+                <span style="font-size: 12px; color: #2e7d32; font-weight: 600;">🌿 S13 [환경재단]</span><span style="font-size: 12px;">
+                [1박2일] 요테이산 → 키타유자 온천 호텔 → 도야 유람선 → 오타루
+              </span></div>
+            </td>
+          </tr>
+          <tr class="course-list-row">
+            <td><span style="font-size: 12px;">삿포로 Day 2</span><br><span style="font-weight: 400; font-size: 12px; color: rgb(102, 102, 102);">(6/23)</span></td>
+            <td style="text-align: left">
+              <div class="course-item">
+                <span style="font-size: 12px;">SS1</span><span style="font-size: 12px;">
+                오타루 운하/오르골당, 시로이코히비토 파크, 시내 면세점&nbsp;&nbsp;
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">SS2</span><span style="font-size: 12px;">
+                히츠지가오카 전망대, 북해도 개척촌, 오르골당, 시내 면세점&nbsp;
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">SS3</span><span style="font-size: 12px;">
+                삿포로 맥주 박물관, 오오도리 공원, 구도청사(외관), 시내 면세점&nbsp;
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">SS-PG</span><span style="font-size: 12px;">
+                야마구치 녹지 파크 골프장(18H), 맥주 박물관, 시내 면세점&nbsp;&nbsp;
+              </span></div>
+              <div class="course-item">
+                <span style="font-size: 12px;">SS-S</span><span style="font-size: 12px;">
+                천연 온천욕, 시내 면세점&nbsp;&nbsp;
+              </span></div>
+              <div class="course-item" style="background-color: #e8f5e9; padding: 4px 8px; margin-top: 8px; border-left: 3px solid #66bb6a;">
+                <span style="font-size: 12px; color: #2e7d32; font-weight: 600;">🌿 SS11 [환경재단]</span><span style="font-size: 12px;">
+                모레에누마공원 (영상+Q&A) → 오오도리 공원 → 맥주 박물관
+              </span></div>
+              <div class="course-item" style="background-color: #e8f5e9; padding: 4px 8px; margin-top: 4px; border-left: 3px solid #66bb6a;">
+                <span style="font-size: 12px; color: #2e7d32; font-weight: 600;">🌿 SS12 [환경재단]</span><span style="font-size: 12px;">
+                로이스 초콜릿 타운 → 오타루 운하 → 오르골당
+              </span></div>
+              <div class="course-item" style="background-color: #e8f5e9; padding: 4px 8px; margin-top: 4px; border-left: 3px solid #66bb6a;">
+                <span style="font-size: 12px; color: #2e7d32; font-weight: 600;">🌿 SS13 [환경재단]</span><span style="font-size: 12px;">
+                부처의 언덕 (안도 타다오) → 오오도리 공원 → 구 도청사(외관)
+              </span></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 통합 상품 가격표 -->
+    <div class="content-container">
+      <div class="section-header-blue">📋 기항지 상품 상세 안내</div>
+
+      <!-- 소개 문구 -->
+      <div style="padding: 20px; background: #f9f9f9; border-bottom: 1px solid #e0e0e0;">
+        <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 10px;">
+          🌏 날짜별 선택 가능한 모든 상품
+        </div>
+        <div style="font-size: 13px; color: #555; line-height: 1.7;">
+          각 기항지별로 선택하실 수 있는 모든 상품을 안내해 드립니다. 
+          <strong style="color: #2e7d32;">🌿 환경재단 추천 상품</strong>은 환경을 고려하여 특별히 기획된 친환경 프리미엄 상품입니다.
+        </div>
+      </div>
+
+      <!-- 통합 가격표 -->
+      <table class="pricing-table" style="margin-bottom: 0;">
+        <thead>
+          <tr>
+            <th width="10%">코드</th>
+            <th width="18%">상품명</th>
+            <th width="42%">주요 일정</th>
+            <th width="12%">식사</th>
+            <th width="18%">성인 가격</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ===== 하코다테 (6/21) ===== -->
+          <tr style="background-color: #e3f2fd;">
+            <td colspan="5" style="font-weight: 700; color: #1565c0; text-align: left; padding: 12px; font-size: 14px;">
+              📍 하코다테 (6월 21일)
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">H1</td>
+            <td style="text-align: left; font-weight: 600;">역사와 야경</td>
+            <td style="text-align: left; font-size: 12px;">
+              선내 중식 → 고료가쿠 타워 & 공원 → 아카렌가 창고군 → 선내 석식(재승선) → 로프웨이 (야경)
+            </td>
+            <td style="text-align: center; font-size: 12px;">선내<br>중식·석식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">180,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">H2</td>
+            <td style="text-align: left; font-weight: 600;">자연과 야경</td>
+            <td style="text-align: left; font-size: 12px;">
+              선내 중식 → 오오누마 국정공원 (산책) → 아카렌가 창고군 → 선내 석식(재승선) → 로프웨이 (야경)
+            </td>
+            <td style="text-align: center; font-size: 12px;">선내<br>중식·석식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">190,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">H-PG</td>
+            <td style="text-align: left; font-weight: 600;">파크골프 A</td>
+            <td style="text-align: left; font-size: 12px;">
+              선내 중식 → 시노리 파크골프장 (18H) → 선내 석식(재승선) → 로프웨이 (야경)
+            </td>
+            <td style="text-align: center; font-size: 12px;">선내<br>중식·석식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">280,000원</td>
+          </tr>
+          <tr style="background-color: #e8f5e9;">
+            <td style="font-weight: 700; color: #2e7d32;">🌿 H11</td>
+            <td style="text-align: left; font-weight: 600; color: #2e7d32;">레트로 온천</td>
+            <td style="text-align: left; font-size: 12px;">
+              하선 → 모토마치 공원 산책 → 하코다테 온천 체험 (타올 제공/수영복X) → 귀선
+            </td>
+            <td style="text-align: center; font-size: 12px;">현지식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">240,000원</td>
+          </tr>
+          <tr style="background-color: #e8f5e9;">
+            <td style="font-weight: 700; color: #2e7d32;">🌿 H12</td>
+            <td style="text-align: left; font-weight: 600; color: #2e7d32;">언덕 위 풍경</td>
+            <td style="text-align: left; font-size: 12px;">
+              하선 → 모토마치 공원 산책 → 하코다테 로프웨이 → 아카렌가 창고 쇼핑 & 자유 석식
+            </td>
+            <td style="text-align: center; font-size: 11px;">자유식<br><span style="color: #666;">(2,000엔 지급)</span></td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">210,000원</td>
+          </tr>
+
+          <!-- ===== 오타루/삿포로 Day 1 (6/22) ===== -->
+          <tr style="background-color: #e3f2fd;">
+            <td colspan="5" style="font-weight: 700; color: #1565c0; text-align: left; padding: 12px; font-size: 14px;">
+              📍 오타루/삿포로 Day 1 (6월 22일)
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">S1</td>
+            <td style="text-align: left; font-weight: 600;">오타루 감성</td>
+            <td style="text-align: left; font-size: 12px;">
+              오타루 운하 → 오르골당 & 기타이치 유리공방 & 과자거리 → 윙베이 오타루 (쇼핑)
+            </td>
+            <td style="text-align: center; font-size: 12px;">선내<br>중식·석식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">160,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">S2</td>
+            <td style="text-align: left; font-weight: 600;">삿포로 도심</td>
+            <td style="text-align: left; font-size: 12px;">
+              오오도리 공원 & 시계탑(외관) → 이온 복합쇼핑몰 (생활용품 쇼핑)
+            </td>
+            <td style="text-align: center; font-size: 12px;">선내<br>중식·석식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">150,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">S3</td>
+            <td style="text-align: left; font-weight: 600;">삿포로 전망</td>
+            <td style="text-align: left; font-size: 12px;">
+              모이와야마 전망대 (로프웨이) → 오오도리 공원 & 시계탑(외관)
+            </td>
+            <td style="text-align: center; font-size: 12px;">선내<br>중식·석식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">180,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">S4</td>
+            <td style="text-align: left; font-weight: 600;">미식과 야경</td>
+            <td style="text-align: left; font-size: 12px;">
+              JR타워 전망대 (T38) → [특식] 3대 게 뷔페 석식 → 귀선
+            </td>
+            <td style="text-align: center; font-size: 12px;">게뷔페<br>석식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">260,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">S5</td>
+            <td style="text-align: left; font-weight: 600;">삿포로 테마</td>
+            <td style="text-align: left; font-size: 12px;">
+              시로이코이비토 파크 → 삿포로 TV타워 → 오오도리 공원 → 자유 석식
+            </td>
+            <td style="text-align: center; font-size: 11px;">자유식<br><span style="color: #666;">(자유 석식)</span></td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">200,000원</td>
+          </tr>
+          <tr style="background-color: #e8f5e9;">
+            <td style="font-weight: 700; color: #2e7d32;">🌿 S11</td>
+            <td style="text-align: left; font-weight: 600; color: #2e7d32;">스위트 오타루</td>
+            <td style="text-align: left; font-size: 12px;">
+              텐구산 로프웨이 (해발 532m) → 오타루 오르골당 & 과자거리 → 오타루 운하
+            </td>
+            <td style="text-align: center; font-size: 12px;">현지식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">250,000원</td>
+          </tr>
+          <tr style="background-color: #e8f5e9;">
+            <td style="font-weight: 700; color: #2e7d32;">🌿 S12</td>
+            <td style="text-align: left; font-weight: 600; color: #2e7d32;">샤코탄 트래킹</td>
+            <td style="text-align: left; font-size: 12px;">
+              카무이 미사키 트래킹 (곰출몰 주의, 70-80분) → 미사키노유 샤코탄 온천 → 오타루 맥주 양조장
+            </td>
+            <td style="text-align: center; font-size: 12px;">없음</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">210,000원</td>
+          </tr>
+          <tr style="background-color: #e8f5e9;">
+            <td style="font-weight: 700; color: #2e7d32;">🌿 S13</td>
+            <td style="text-align: left; font-weight: 600; color: #2e7d32;">[1박2일] 도야</td>
+            <td style="text-align: left; font-size: 12px;">
+              오타루 → 요테이산 → 키타유자 온천 호텔 숙박 → 도야호 유람선 → 오타루 복귀
+            </td>
+            <td style="text-align: center; font-size: 12px;">3식 제공</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">550,000원</td>
+          </tr>
+
+          <!-- ===== 삿포로 Day 2 (6/23) ===== -->
+          <tr style="background-color: #e3f2fd;">
+            <td colspan="5" style="font-weight: 700; color: #1565c0; text-align: left; padding: 12px; font-size: 14px;">
+              📍 삿포로 Day 2 (6월 23일)
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">SS1</td>
+            <td style="text-align: left; font-weight: 600;">동화 속 세상</td>
+            <td style="text-align: left; font-size: 12px;">
+              오타루 운하/오르골당 → 중식 → 시로이코이비토 파크 → 면세점
+            </td>
+            <td style="text-align: center; font-size: 12px;">현지식<br>중식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">200,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">SS2</td>
+            <td style="text-align: left; font-weight: 600;">개척의 역사</td>
+            <td style="text-align: left; font-size: 12px;">
+              히츠지가오카 전망대 → 북해도 개척촌 → 중식 → 오르골당 → 면세점
+            </td>
+            <td style="text-align: center; font-size: 12px;">현지식<br>중식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">210,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">SS3</td>
+            <td style="text-align: left; font-weight: 600;">맥주와 도심</td>
+            <td style="text-align: left; font-size: 12px;">
+              오타루 운하 → 삿포로 맥주 박물관 → 자유 중식 → 오오도리 공원 → 면세점
+            </td>
+            <td style="text-align: center; font-size: 11px;">자유식<br><span style="color: #666;">(자유 중식)</span></td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">190,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">SS-PG</td>
+            <td style="text-align: left; font-weight: 600;">파크골프 B</td>
+            <td style="text-align: left; font-size: 12px;">
+              야마구치 파크골프장 (18H) → 자유 중식 → 맥주 박물관 → 면세점
+            </td>
+            <td style="text-align: center; font-size: 11px;">자유식<br><span style="color: #666;">(자유 중식)</span></td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">250,000원</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #1565c0;">SS-S</td>
+            <td style="text-align: left; font-weight: 600;">온천 힐링</td>
+            <td style="text-align: left; font-size: 12px;">
+              조잔케이/키타유자급 온천욕 → 중식 → 오타루 운하 → 면세점
+            </td>
+            <td style="text-align: center; font-size: 12px;">현지식<br>중식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">230,000원</td>
+          </tr>
+          <tr style="background-color: #e8f5e9;">
+            <td style="font-weight: 700; color: #2e7d32;">🌿 SS11</td>
+            <td style="text-align: left; font-weight: 600; color: #2e7d32;">삿포로 RE:BORN</td>
+            <td style="text-align: left; font-size: 12px;">
+              모레에누마 공원 (영상+Q&A) → 오오도리 공원 → 삿포로 맥주 박물관
+            </td>
+            <td style="text-align: center; font-size: 11px;">자유식<br><span style="color: #666;">(2,000엔 지급)</span></td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">220,000원</td>
+          </tr>
+          <tr style="background-color: #e8f5e9;">
+            <td style="font-weight: 700; color: #2e7d32;">🌿 SS12</td>
+            <td style="text-align: left; font-weight: 600; color: #2e7d32;">스위트 파라다이스</td>
+            <td style="text-align: left; font-size: 12px;">
+              로이스 카카오 초콜릿 타운 → 오타루 운하 → 오타루 오르골당
+            </td>
+            <td style="text-align: center; font-size: 12px;">현지식</td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">230,000원</td>
+          </tr>
+          <tr style="background-color: #e8f5e9;">
+            <td style="font-weight: 700; color: #2e7d32;">🌿 SS13</td>
+            <td style="text-align: left; font-weight: 600; color: #2e7d32;">건축과 예술</td>
+            <td style="text-align: left; font-size: 12px;">
+              부처의 언덕 (안도 타다오) → 오오도리 공원 → 구 도청사(외관)
+            </td>
+            <td style="text-align: center; font-size: 11px;">자유식<br><span style="color: #666;">(2,000엔 지급)</span></td>
+            <td style="font-weight: 700; color: #d32f2f; text-align: center;">230,000원</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 유의사항 -->
+      <div style="padding: 20px; background: #fff; border-top: 2px solid #1976d2;">
+        <div style="font-weight: 700; color: #1565c0; margin-bottom: 12px; font-size: 14px;">
+          📌 상품 선택 안내
+        </div>
+        <div style="font-size: 12px; color: #555; line-height: 1.8;">
+          <div style="margin-bottom: 8px;">• <strong>가격 안내:</strong> 위 가격은 성인 1인 기준이며, 어린이 요금은 별도 문의해주세요</div>
+          <div style="margin-bottom: 8px;">• <strong>🌿 환경재단 추천 상품:</strong> 환경을 고려한 특별 기획 상품으로, 지속가능한 관광과 문화예술 체험이 결합되어 있습니다</div>
+          <div style="margin-bottom: 8px;">• <strong>식사:</strong> "선내"는 크루즈 선박 내 식당, "현지식"은 육상 레스토랑, "자유식"은 자유롭게 식사 선택</div>
+          <div style="margin-bottom: 8px;">• <strong>파크골프:</strong> 본인 전용 채/볼/슈즈 지참 필수 (H-PG: 파크골프 A, SS-PG: 파크골프 B)</div>
+          <div style="margin-bottom: 8px;">• <strong>특수 상품:</strong> 온천(SS-S, 선착순 36명), 게 뷔페(S4, 3대 게 무제한)</div>
+          <div>• <strong>예약:</strong> 인기 상품은 조기 마감될 수 있으니 서둘러 예약해 주세요</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 5: Remarks -->
+    <div class="content-container-orange">
+
+      <div class="section-header-orange"><span style="font-size: 12px;">⚠️ 상세 안내 및 주의사항</span></div>
+      <div style="padding: 20px">
+        <table style="margin-bottom: 0">
+          <thead>
+            <tr>
+              <th width="15%" style="background-color: #e3f2fd"><span style="font-size: 12px;">구분</span></th>
+              <th style="background-color: #e3f2fd"><span style="font-size: 12px;">내용</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center; font-weight: 700; background-color: #f5fafd; color: #1565c0"><span style="font-size: 12px;">포함내역</span></td>
+              <td style="text-align: left"><span style="font-size: 12px;">
+                ■ 기항지관광, 전문가이드, 크루즈 전문 인솔 가이드 동행, 여행지 입장료, 관광 프로그램 일정 내 식사
+              </span></td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 700; background-color: #f5fafd; color: #1565c0"><span style="font-size: 12px;">
+                불포함내역
+              </span></td>
+              <td style="text-align: left"><span style="font-size: 12px;">■ 자유일정, 일정에 포함되지 않은 식사 및 기타 개인 경비, 매너팁(자유) 등</span></td>
+            </tr>
+            <tr>
+              <td style="
+                  text-align: center;
+                  font-weight: 700;
+                  background-color: #f5fafd;
+                  color: #1565c0;
+                  vertical-align: top;
+                  padding-top: 15px;
+                "><span style="font-size: 12px;">
+                주의사항
+              </span></td>
+              <td style="text-align: left"><span style="font-size: 12px;">
+                ■ 최소 출발 인원 35명 (인원 미달 시 추가 요금 발생 또는 다른 기항지관광 상품 안내 가능)</span><br><span style="font-size: 12px;">
+                ■ 기항지 두 곳 또는 세 곳을 패키지로 판매 (일부 기항지 선별 및 코스 변경 불가)</span><br><span style="font-size: 12px;">
+                ■ 일반 소비자용 취소료 약관과 동일하게 적용됩니다.</span><br><span style="font-size: 12px;">
+                ■ 기항지 투어 명단은 출발 3주 전까지 확정되어야 합니다.</span><br><span style="font-size: 12px;">
+                ■ </span><strong><span style="font-size: 12px;">파크골프(H-PG, SS-PG)</span></strong><span style="font-size: 12px;">: 본인 전용 채, 볼, 슈즈 지참 필수 / 선착순 40명 한정 /&nbsp;</span><br><span style="font-size: 12px;">
+                ■ </span><strong><span style="font-size: 12px;">온천(SS-S)</span></strong><span style="font-size: 12px;">: 쾌적한 입욕을 위해 선착순 36명 한정</span><br><span style="font-size: 12px;">
+                ■ 일정중&nbsp;</span><strong><span style="font-size: 12px;">자유 중식비(2,000엔)는</span></strong><span style="font-size: 12px;">&nbsp;인솔자가 현장에서 사전에 현찰로 지급 해 드립니다.</span><br><span style="font-size: 12px;">
+                ■ 상기 일정은 현지 사정으로 인해 변경될 수 있으며 입장 순서는 바뀔 수 있습니다.
+              </span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Part 2: Detailed Schedule -->
+    <section>
+      <h3 class="section-title">📅 기항지별 관광 코스 상세 설명</h3>
+
+      <!-- H1 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/21, 하코다테 - H1 ] 모두투어 <span style="float: right; font-size: 12px">🍽️ 석식(선내)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 6~7시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오오누마 국정공원</div>
+            <div class="attraction-desc">
+              웅장한 코마가타케 산을 배경으로 그림 같은 호수 풍경이 펼쳐지는 곳. 호수 위 작은 섬들을 잇는 다리를 건너며
+              북해도의 광활한 자연을 느끼는 힐링 코스.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 하코다테 아카렌가</div>
+            <div class="attraction-desc">
+              붉은 벽돌 창고군을 따라 걷는 로맨틱한 항구 산책. 아기자기한 소품샵과 카페가 가득하여 하코다테만의 여유로운
+              분위기를 즐기기에 최적의 장소.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 하코다테 로프웨이</div>
+            <div class="attraction-desc">
+              선내에서 편안하게 석식을 마친 후 다시 이동하여 관람하는 코스. 산 정상에서 내려다보는 다이아몬드처럼 빛나는
+              야경은 잊지 못할 감동을 선사함.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- H2 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/21, 하코다테 - H2 ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 7~8시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 고료가쿠 타워 & 공원</div>
+            <div class="attraction-desc">
+              별 모양의 서양식 성곽 유적을 타워 위에서 내려다보는 독특한 경험. 일본 근대사의 중요 현장을 감상하며
+              역사적 의미를 되새기는 코스.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 하코다테 아카렌가</div>
+            <div class="attraction-desc">
+              붉은 벽돌 창고군을 따라 걷는 로맨틱한 항구 산책. 아기자기한 소품샵과 카페가 가득하여 하코다테만의 여유로운
+              분위기를 즐기기에 최적의 장소.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 하코다테 로프웨이</div>
+            <div class="attraction-desc">
+              선내에서 편안하게 석식을 마친 후 다시 이동하여 관람하는 코스. 산 정상에서 내려다보는 다이아몬드처럼 빛나는
+              야경은 잊지 못할 감동을 선사함.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- H-PG Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/21, 하코다테 - H-PG ] 모두투어 <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
+          <span>💪 코스 난이도 : 상</span>
+          <span>⏱️ 소요시간 : 약 6~7시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 시노리 파크 골프장 (18홀 라운딩)</div>
+            <div class="attraction-desc">
+              하코다테의 쾌적한 자연 속에서 즐기는 파크 골프 라운딩 코스. 18홀을 즐기며 여유로운 오전 시간을 보낼 수 
+              있으며, 함께 온 동호회 친구들과 즐거운 시간을 보낼 수 있는 특별한 일정입니다.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 하코다테 로프웨이</div>
+            <div class="attraction-desc">
+              골프 라운딩 후 선내에서 편안하게 석식을 마치고 다시 이동하여 감상하는 야경. 산 정상에서 내려다보는 
+              다이아몬드처럼 빛나는 하코다테 야경은 잊지 못할 감동을 선사합니다.
+            </div>
+          </div>
+          <div class="attraction-item" style="
+              margin-bottom: 0;
+              background: #fff3e0;
+              padding: 10px;
+              border-radius: 6px;
+              border-left: 4px solid #ff9800;
+              margin-top: 15px;
+            ">
+            <div class="attraction-title" style="color: #e65100">⚠️ 안내 사항</div>
+            <div class="attraction-desc" style="padding-left: 0; color: #bf360c">
+              본인 전용 채, 볼, 슈즈 지참 필수 / 선착순 30명 한정 모집
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- H11 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/21, 하코다테 - H11 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 석식(현지식)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(XXX), 석식(현지식)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 5.5~6시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 레트로 골목을 지나 만나는 온천여행</div>
+            <div style="font-size: 13px; color: #555;">
+              하코다테의 역사적인 모토마치 공원을 산책하고, 일본 전통 온천 문화를 체험하는 힐링 여행
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 모토마치 공원</div>
+            <div class="attraction-desc">
+              하코다테 항구를 한눈에 내려다보는 언덕 위의 공원. 서양식 건축물들이 늘어선 레트로 거리를 거닐며 
+              하코다테의 역사와 낭만을 느낄 수 있는 명소입니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 하코다테 온천 체험</div>
+            <div class="attraction-desc">
+              전통 일본식 온천에서 여행의 피로를 풀 수 있는 특별한 시간. 바디 타올과 페이스 타올이 제공되며, 
+              남녀탕이 분리되어 있습니다. 수영복 착용은 불가하며, 문신이 있을 경우 입욕이 거부될 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 현지식 석식</div>
+            <div class="attraction-desc">
+              온천 체험 후 하코다테 현지 레스토랑에서 신선한 해산물과 홋카이도 특산 요리를 즐길 수 있습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- H12 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/21, 하코다테 - H12 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 석식(자유식/2,000엔 지급)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(XXX), 석식(자유식/2,000엔 지급)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 4.5~5시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 언덕 위 쇼핑, 산 위 풍경</div>
+            <div style="font-size: 13px; color: #555;">
+              하코다테의 아름다운 전망을 즐기고, 레트로 창고에서 쇼핑과 자유로운 식사를 즐기는 여유 있는 일정
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 모토마치 공원</div>
+            <div class="attraction-desc">
+              하코다테의 역사적 중심지로, 서양식 건축물과 이국적인 분위기가 어우러진 산책로. 
+              항구와 도시를 한눈에 조망할 수 있는 뷰포인트입니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 하코다테 로프웨이</div>
+            <div class="attraction-desc">
+              하코다테산 정상까지 3분 만에 오르는 로프웨이. 정상에서는 하코다테 시가지와 양쪽 바다가 
+              만드는 독특한 지형을 360도 파노라마로 감상할 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 아카렌가 창고 쇼핑 & 자유 석식</div>
+            <div class="attraction-desc">
+              붉은 벽돌로 지어진 역사적인 창고 건물들이 쇼핑몰과 레스토랑으로 변신한 명소. 
+              다양한 기념품 쇼핑과 함께 2,000엔의 식사비를 지급받아 원하는 레스토랑에서 자유롭게 석식을 즐길 수 있습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S1 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S1 ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 5~6시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오오도리 공원 & 시계탑</div>
+            <div class="attraction-desc">
+              삿포로의 심장부로 불리는 도심 속 녹지 공간과 130년 이상의 역사를 간직한 도시의 상징인 시계탑(외관)을
+              관람하며 삿포로의 역사와 현재를 느껴보는 코스.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 이온 복합쇼핑몰</div>
+            <div class="attraction-desc">
+              일본 현지인들에게도 사랑받는 대형 쇼핑몰로, 기념품은 물론 다양한 일본 브랜드와 생활 잡화를 합리적인 가격에
+              구매할 수 있는 쇼핑의 명소.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S2 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S2 ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 4~5시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오타루 운하</div>
+            <div class="attraction-desc">
+              20세기 초반 오타루의 번영을 상징하는 수로로, 옛 석조 창고들을 따라 조성된 산책로에서 오타루 특유의
+              서정적이고 이국적인 분위기를 만끽할 수 있는 명소.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오르골당 &amp; 과자거리</div>
+            <div class="attraction-desc">
+              세계 각국의 오르골 수천 점이 전시된 박물관과 북해도를 대표하는 유명 디저트 샵들이 늘어선 거리로,
+              아기자기한 기념품 쇼핑과 달콤한 미식 체험이 동시에 가능한 곳.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 윙베이 오타루</div>
+            <div class="attraction-desc">
+              오타루항 인근에 위치한 대형 복합 쇼핑 센터. 다양한 브랜드와 면세점, 레스토랑이 입점해 있어 투어의 마지막을
+              여유로운 쇼핑으로 마무리하기에 최적의 장소.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- S3 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S3 ] <span style="float: right; font-size: 12px">🍽️ 중식(선내), 석식(선내)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(선내), 석식(선내)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 5~6시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 모이와야마 전망대</div>
+            <div class="attraction-desc">
+              로프웨이를 타고 해발 531m 정상에서 삿포로 시가지와 멀리 이시카리 평야까지 한눈에 조망할 수 있는 전망
+              명소로, 탁 트인 시야와 함께 시원한 개방감을 선사하는 곳.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 오오도리 공원 &amp; 시계탑</div>
+            <div class="attraction-desc">
+              삿포로 시내의 랜드마크를 둘러보는 코스. 계절마다 다른 매력을 뽐내는 공원 산책과 함께 클래식한 붉은 지붕의
+              시계탑을 배경으로 기념사진 촬영이 가능한 코스.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- S4 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S4 ] 모두투어 <span style="float: right; font-size: 12px">🍽️&nbsp; 석식(게 뷔페)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(XXX), 석식(게 뷔페)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 5~6시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ JR타워 전망대</div>
+            <div class="attraction-desc">
+              삿포로역에 위치한 38층 높이의 전망대로, 삿포로 시내 전경을 360도 파노라마로 감상할 수 있는 명소. 
+              탁 트인 전망과 함께 현대적인 도시의 매력을 느낄 수 있는 코스.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 게 뷔페 석식</div>
+            <div class="attraction-desc">
+              북해도의 신선한 킹크랩, 대게, 모리게 등 다양한 게 요리를 무제한으로 즐길 수 있는 특별 뷔페 식사. 
+              여행의 하이라이트가 될 최고급 미식 체험 시간. ※ 일본은 <u>게요리가 차가워야 단맛이 극대화된다고 생각해서 차갑게 제공</u>됩니다.&nbsp;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S5 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/22, 오타루 (Day 1) - S5 ] 모두투어 <span style="float: right; font-size: 12px">🍽️ 석식(자유식/2,000엔 지급)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(XXX), 석식(자유식/2,000엔 지급)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 5~6시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 시로이 코히비토 파크</div>
+            <div class="attraction-desc">
+              삿포로의 명물 과자 '시로이코히비토'의 제조 과정을 견학하고 아름다운 영국식 정원을 감상할 수 있는 과자
+              테마파크로, 가족 및 연인에게 인기 있는 명소.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 삿포로 TV타워</div>
+            <div class="attraction-desc">
+              오오도리 공원 동쪽 끝에 위치한 높이 147.2m의 랜드마크. 전망대에서 삿포로 시내와 공원 전경을 
+              한눈에 조망할 수 있는 대표적인 전망 명소.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 오오도리 공원</div>
+            <div class="attraction-desc">
+              삿포로의 심장부로 불리는 도심 속 녹지 공간. 계절마다 다양한 꽃과 조각품이 어우러진 아름다운 산책로를 
+              즐기며 여유로운 시간을 보낼 수 있는 곳.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S11 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/22, 오타루 (Day 1) - S11 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 석식(현지식)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️  식사 : 중식(XXX), 석식(현지식)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 4시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 스위트 오타루</div>
+            <div style="font-size: 13px; color: #555;">
+              텐구산 전망대에서 오타루 시가지를 조망하고, 낭만적인 오타루 운하와 오르골당에서 감성 여행
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 텐구산 로프웨이</div>
+            <div class="attraction-desc">
+              오타루 시가지와 이시카리만을 한눈에 조망할 수 있는 해발 532m의 전망대. 
+              로프웨이는 최대 30명까지 탑승 가능하며, 정상에서의 전망은 오타루 최고의 뷰포인트로 손꼽힙니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오타루 오르골당 & 과자거리</div>
+            <div class="attraction-desc">
+              3,000개 이상의 오르골을 전시한 일본 최대 규모의 오르골 전문점. 아름다운 음색의 오르골을 
+              감상하고 구매할 수 있으며, 인근 과자거리에서는 르타오, 키타카로 등 홋카이도 명품 과자를 맛볼 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 오타루 운하</div>
+            <div class="attraction-desc">
+              대정시대부터 이어져 온 역사적인 운하로, 석조 창고와 가스등이 늘어선 낭만적인 산책로. 
+              운하를 따라 걸으며 오타루의 고즈넉한 분위기를 만끽할 수 있습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S12 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/22, 오타루 (Day 1) - S12 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 식사 없음</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(XXX), 석식(XXX)</span>
+          <span>💪 코스 난이도 : 상</span>
+          <span>⏱️ 소요시간 : 약 6시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 샤코탄 트래킹 (40대 김부장 이야기)</div>
+            <div style="font-size: 13px; color: #555;">
+              홋카이도의 숨겨진 비경 샤코탄 반도를 트래킹하고, 자연 온천에서 힐링하는 액티브 투어
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 카무이 미사키 트래킹</div>
+            <div class="attraction-desc">
+              샤코탄 반도 끝에 위치한 신비로운 절벽 지대. 약 70~80분 소요되는 트래킹 코스를 따라 걸으면 
+              코발트블루 빛깔의 샤코탄 블루 바다와 웅장한 절벽을 만날 수 있습니다. 
+              <span style="color: #d32f2f; font-weight: 600;">※ 곰 출몰 지역으로 갑작스런 입장 통제가 있을 수 있습니다.</span>
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 미사키노유 샤코탄 온천</div>
+            <div class="attraction-desc">
+              바다를 바라보며 즐기는 천연 온천. 트래킹으로 지친 몸을 따뜻한 온천에서 풀 수 있습니다. 
+              바디 타올과 페이스 타올이 제공되며, 남녀탕 분리, 수영복 착용 불가입니다.
+              <span style="color: #666; font-size: 12px;">※ 11월~3월 휴관, 내년 4월 초 재확인 예정</span>
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 오타루 맥주 양조장 (오타루 창고 NO.1)</div>
+            <div class="attraction-desc">
+              역사적인 석조 창고를 개조한 수제 맥주 양조장. 자유롭게 견학하며 오타루의 크래프트 비어 문화를 
+              체험할 수 있습니다. 양조장 견학 후 도보로 크루즈에 자유 승선합니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="
+              margin-bottom: 0;
+              background: #fff3e0;
+              padding: 10px;
+              border-radius: 6px;
+              border-left: 4px solid #ff9800;
+              margin-top: 15px;
+            ">
+            <div class="attraction-title" style="color: #e65100">⚠️ 안내 사항</div>
+            <div class="attraction-desc" style="padding-left: 0; color: #bf360c">
+              트래킹에 적합한 복장과 신발 착용 필수 / 최대 40명 한정 / 식사 미포함 (간식 지참 권장) / 
+              기상 악화 시 일정 변경 가능
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S13 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/22-23, 오타루 (1박2일) - S13 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 3식 제공</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 석식(호텔 뷔페), 조식(호텔), 중식(현지식)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 1박2일 (Day1 약 3시간 + Day2 약 7~7.5시간)</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #fff9c4; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #fbc02d;">
+            <div style="font-weight: 700; color: #f57f00; margin-bottom: 6px;">🌟 프리미엄 1박2일 상품</div>
+            <div style="font-size: 13px; color: #555;">
+              크루즈를 벗어나 홋카이도의 자연과 온천 리조트에서 하룻밤을 보내는 특별한 경험. 
+              요테이산의 청정 자연수와 도야호의 유람선 투어까지 포함된 프리미엄 패키지입니다.
+            </div>
+          </div>
+
+          <div style="font-weight: 700; color: #1565c0; font-size: 14px; margin: 20px 0 10px 0; padding-bottom: 8px; border-bottom: 2px solid #e3f2fd;">
+            📅 Day 1 (6/22, 월요일)
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 요테이산 후키다시 공원</div>
+            <div class="attraction-desc">
+              '에조후지'로 불리는 요테이산 기슭에 위치한 공원. 요테이산에서 흘러내리는 맑은 용천수를 
+              직접 마실 수 있으며, 깨끗한 자연 속에서 산책을 즐길 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 키타유자 온천 호텔 (모리노 소라니와 급)</div>
+            <div class="attraction-desc">
+              홋카이도의 대표적인 온천 리조트 호텔에서 1박. 2~3인 1실 기준으로 배정되며, 
+              호텔 내 천연 온천과 뷔페 석식이 제공됩니다. 여유롭게 온천을 즐기며 여행의 피로를 풀 수 있습니다.
+              <br><span style="color: #666; font-size: 12px;">※ 싱글룸 발생 시 1인당 추가 요금 발생</span>
+            </div>
+          </div>
+
+          <div style="font-weight: 700; color: #1565c0; font-size: 14px; margin: 20px 0 10px 0; padding-bottom: 8px; border-bottom: 2px solid #e3f2fd;">
+            📅 Day 2 (6/23, 화요일)
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 도야호 유람선</div>
+            <div class="attraction-desc">
+              일본 3대 칼데라 호수 중 하나인 도야호를 유람선을 타고 약 50분간 순회. 
+              맑고 푸른 호수와 주변의 화산 지형이 만들어내는 절경을 감상할 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 쇼와신잔</div>
+            <div class="attraction-desc">
+              1943년 화산 활동으로 생성된 신생 화산. 붉은 용암 지대와 계속 솟아오르는 증기를 
+              가까이에서 관찰할 수 있는 독특한 지질학적 명소입니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 사이로 전망대</div>
+            <div class="attraction-desc">
+              도야호와 주변 산맥을 한눈에 조망할 수 있는 최고의 전망대. 
+              포토존에서 도야호의 아름다운 풍경을 배경으로 기념사진을 남길 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 오타루 오르골당 & 과자거리</div>
+            <div class="attraction-desc">
+              오타루로 돌아와 오르골당과 유명 과자 브랜드들이 모여 있는 과자거리를 둘러본 후 크루즈에 승선합니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="
+              margin-bottom: 0;
+              background: #fff3e0;
+              padding: 10px;
+              border-radius: 6px;
+              border-left: 4px solid #ff9800;
+              margin-top: 15px;
+            ">
+            <div class="attraction-title" style="color: #e65100">⚠️ 안내 사항</div>
+            <div class="attraction-desc" style="padding-left: 0; color: #bf360c">
+              • 최대 120명 한정 (3대 버스)<br>
+              • 호텔: 모리노 소라니와 키타유자 온천 호텔 급 (2~3인 1실 기준)<br>
+              • 싱글룸 발생 시 추가 요금 발생<br>
+              • 3월 20일까지 진행 여부 확정 필요<br>
+              • 5월 13일부터 취소 수수료 발생<br>
+              • 개인 세면도구 및 1박용 짐 준비 권장
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- SS1 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS1 ] <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 7~8시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오타루 운하 &amp; 오르골당</div>
+            <div class="attraction-desc">
+              오타루의 상징인 운하 산책과 함께 수만 점의 오르골이 선사하는 신비로운 멜로디를 감상하고, 북해도 유명
+              디저트가 가득한 과자거리를 즐기는 코스.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 시로이코히비토 파크</div>
+            <div class="attraction-desc">
+              삿포로의 명물 과자 '시로이코히비토'의 제조 과정을 견학하고 아름다운 영국식 정원을 감상할 수 있는 과자
+              테마파크로 가족 및 연인에게 인기 있는 명소.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 시내 면세점</div>
+            <div class="attraction-desc">
+              일본 여행의 필수 코스인 면세점에 방문하여 고품질의 일본 화장품, 건강식품, 생활용품 등을 합리적인 가격에
+              쇼핑할 수 있는 시간.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS2 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS2 ] <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 7~8시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 히츠지가오카 전망대</div>
+            <div class="attraction-desc">
+              "소년이여 야망을 가져라"로 유명한 클라크 박사의 동상이 있는 곳으로, 삿포로 시내와 광활한 목초지를 한눈에
+              담을 수 있는 탁 트인 조망 명소.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 북해도 개척촌</div>
+            <div class="attraction-desc">
+              메이지 시대부터 쇼와 시대 초기까지의 북해도 건축물을 복원해 놓은 야외 박물관으로, 당시의 생활상을 엿볼 수
+              있는 역사 문화 공간.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 오타루 오르골당 &amp; 과자거리</div>
+            <div class="attraction-desc">
+              오후 시간에는 오타루로 이동하여 낭만적인 오르골당과 아기자기한 과자거리를 둘러보며 기항지 투어의 여유를
+              만끽하는 코스.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS3 Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS3 ] <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 7~8시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 삿포로 맥주 박물관</div>
+            <div class="attraction-desc">
+              일본 맥주의 역사와 제조 공정을 한눈에 볼 수 있는 곳으로, 붉은 벽돌의 고풍스러운 외관과 함께 신선한 맥주
+              시음(유료)을 즐길 수 있는 삿포로의 명물.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오오도리 공원</div>
+            <div class="attraction-desc">
+              삿포로 도심 한복판을 가로지르는 대형 공원으로, TV타워를 배경으로 기념사진을 촬영하고 도심 속 여유로운
+              분위기를 즐기는 코스.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 구도청사(외관)</div>
+            <div class="attraction-desc">
+              붉은 벽돌로 지어진 역사적 건축물로 홋카이도의 상징. 외관 관람 및 사진 촬영 후 현지식 중식을 즐기는 일정.
+            </div>
+          </div>
+          <div class="attraction-item" style="margin-bottom: 0">
+            <div class="attraction-title">■ 시내 면세점</div>
+            <div class="attraction-desc">
+              삿포로 시내 관광과 쇼핑을 동시에 만족시키는 일정으로, 여행객들에게 필요한 다양한 면세 물품을 구매할 수
+              있는 마지막 정차지.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS-PG Card -->
+      <div class="course-card">
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS-PG ] <span style="float: right; font-size: 12px">🍽️ 중식(자유식/2,000엔 지급)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(자유식/식비지급), 석식(선내)</span>
+          <span>💪 코스 난이도 : 상</span>
+          <span>⏱️ 소요시간 : 약 7~8시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 야마구치 녹지 파크골프</div>
+            <div class="attraction-desc">
+              삿포로의 쾌적한 자연 속에 위치한 파크 골프장에서 즐기는 18홀 라운딩. 넓은 페어웨이와 잘 관리된 그린 위에서
+              진정한 스포츠의 즐거움을 느낄 수 있는 코스.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 삿포로 맥주 박물관</div>
+            <div class="attraction-desc">
+              일본 맥주의 역사와 제조 공정을 견학할 수 있는 삿포로의 상징적인 장소로, 붉은 벽돌 건물 특유의 고풍스러운
+              분위기를 배경으로 기념사진 촬영 가능.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 시내 면세점</div>
+            <div class="attraction-desc">
+              여행객들에게 인기 있는 일본 가전, 화장품, 건강식품 등을 합리적인 가격에 구매할 수 있는 쇼핑 시간으로
+              기항지 관광의 즐거움을 더하는 일정.
+            </div>
+          </div>
+          <div class="attraction-item" style="
+              margin-bottom: 0;
+              background: #fff3e0;
+              padding: 10px;
+              border-radius: 6px;
+              border-left: 4px solid #ff9800;
+            ">
+            <div class="attraction-title" style="color: #e65100">⚠️ 안내 사항</div>
+            <div class="attraction-desc" style="padding-left: 0; color: #bf360c">
+              본인 전용 채, 볼, 슈즈 지참 필수 / 선착순 30명 한정 모집 / 자유 중식을 위한 식비(2,000엔) 현찰 지급.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS-S Card -->
+      <div class="course-card" style="margin-bottom: 0">
+        <div class="card-header">[ 6/23, 오타루 (Day 2) - SS-S ] <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span></div>
+        <div class="card-info-row">
+          <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 7~8시간</span>
+        </div>
+        <div class="card-content">
+          <div class="attraction-item">
+            <div class="attraction-title">■ 천연 온천욕 체험</div>
+            <div class="attraction-desc">
+              여행의 피로를 말끔히 씻어낼 수 있는 온천욕 일정. 북해도의 맑은 물과 함께 즐기는 온천욕은 몸과 마음을
+              편안하게 이완시켜 주는 최고의 힐링 시간.
+            </div>
+          </div>
+          <div class="attraction-item">
+            <div class="attraction-title">■ 시내 면세점</div>
+            <div class="attraction-desc">
+              온천욕 후 삿포로/오타루 시내의 주요 면세점을 방문하여 기념품 및 선물을 구매할 수 있는 쇼핑 일정이 포함되어 투어의
+              만족도를 높입니다.
+            </div>
+          </div>
+          <div class="attraction-item" style="
+              margin-bottom: 0;
+              background: #fff3e0;
+              padding: 10px;
+              border-radius: 6px;
+              border-left: 4px solid #ff9800;
+            ">
+            <div class="attraction-title" style="color: #e65100">⚠️ 안내 사항</div>
+            <div class="attraction-desc" style="padding-left: 0; color: #bf360c">
+              여유롭고 쾌적한 입욕 환경을 위해 선착순 36명 한정으로 진행되는 상품입니다. 개인 세면도구 지참을
+              권장합니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS11 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/23, 오타루 (Day 2) - SS11 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 중식(자유식/2,000엔 지급)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️  식사 : 중식(자유식/2,000엔 지급), 석식(선내)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 7.5~8시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 삿포로 RE:BORN</div>
+            <div style="font-size: 13px; color: #555;">
+              환경재단의 시그니처 프로그램. 세계적인 환경 건축가 안도 타다오의 작품을 감상하고, 
+              지속가능한 도시 재생 프로젝트인 모레에누마 공원에서 환경 강연을 듣는 특별한 투어
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 모레에누마 공원 (영상 15분 + Q&A 15분)</div>
+            <div class="attraction-desc">
+              세계적인 조각가 이사무 노구치가 설계한 대규모 조각 공원. 쓰레기 매립지를 예술 공원으로 
+              재탄생시킨 지속가능한 도시 재생 프로젝트의 상징입니다. 공원 방문 전 15분간 영상을 시청하고, 
+              환경 전문가와의 Q&A 시간을 통해 환경재단의 가치와 활동을 이해하는 시간을 가집니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오오도리 공원</div>
+            <div class="attraction-desc">
+              삿포로 시내 중심을 가로지르는 1.5km 길이의 대형 녹지 공원. TV타워를 배경으로 
+              기념사진을 촬영하고, 자유 중식을 위해 2,000엔이 지급됩니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 삿포로 맥주 박물관</div>
+            <div class="attraction-desc">
+              1876년 설립된 일본 최초의 맥주 공장. 붉은 벽돌 건물의 고풍스러운 분위기 속에서 
+              맥주의 역사와 제조 과정을 배우고, 신선한 맥주 시음(유료)을 즐길 수 있습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS12 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/23, 오타루 (Day 2) - SS12 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 8시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 스위트 파라다이스</div>
+            <div style="font-size: 13px; color: #555;">
+              달콤한 초콜릿의 세계와 낭만적인 오타루 운하를 즐기는 감성 투어
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 로이스 카카오 초콜릿 타운</div>
+            <div class="attraction-desc">
+              홋카이도가 자랑하는 프리미엄 초콜릿 브랜드 '로이스'의 테마파크. 
+              초콜릿 제조 과정을 자유롭게 견학하고, 다양한 초콜릿 제품을 구매할 수 있습니다. 
+              카페에서는 초콜릿 음료와 디저트를 즐길 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오타루 운하</div>
+            <div class="attraction-desc">
+              운하를 따라 늘어선 석조 창고와 가스등이 낭만적인 분위기를 연출하는 오타루의 상징. 
+              운하 산책로를 걸으며 오타루의 역사와 감성을 느낄 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 오타루 오르골당</div>
+            <div class="attraction-desc">
+              3,000개 이상의 오르골을 전시 판매하는 일본 최대 오르골 전문점. 
+              아름다운 선율과 정교한 디자인의 오르골을 구경하고 구매할 수 있으며, 
+              시내 면세점을 방문한 후 크루즈에 승선합니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS13 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a; margin-bottom: 0;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/23, 오타루 (Day 2) - SS13 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 중식(자유식/2,000엔 지급)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(자유식/2,000엔 지급), 석식(선내)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 7.5~8시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 건축과 예술, 자연의 아름다움</div>
+            <div style="font-size: 13px; color: #555;">
+              세계적인 건축가 안도 타다오의 명작 '부처의 언덕'을 감상하고, 삿포로의 역사적 건축물을 둘러보는 문화 예술 투어
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 부처의 언덕 (안도 타다오 설계)</div>
+            <div class="attraction-desc">
+              세계적인 건축가 안도 타다오가 설계한 마코마나이 다키노 료엔. 라벤더 언덕 너머로 
+              거대한 대불이 보이는 독특한 구조로, 건축과 자연이 완벽하게 조화를 이루는 명작입니다. 
+              계절마다 다른 꽃이 피어나는 언덕을 걸으며 영적인 평온함을 느낄 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오오도리 공원</div>
+            <div class="attraction-desc">
+              삿포로 시내 중심부의 대형 공원. TV타워를 배경으로 기념사진을 촬영하고, 
+              2,000엔의 식사비를 지급받아 원하는 레스토랑에서 자유롭게 중식을 즐길 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 홋카이도 구 도청사 (외관)</div>
+            <div class="attraction-desc">
+              붉은 벽돌로 지어진 서양식 건축물로 '아카렌가 청사'로도 불립니다. 
+              1888년에 지어진 역사적 건축물로, 외관 관람과 사진 촬영 후 시내 면세점을 방문하고 크루즈에 승선합니다.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 기항지관광 상세 설명 -->
+    <section>
+      <h3 class="section-title">🗺️ 기항지관광 상세 설명</h3>
+
+      <!-- H11 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/21, 하코다테 - H11 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 석식(현지식)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(XXX), 석식(현지식)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 5.5~6시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 레트로 골목을 지나 만나는 온천여행</div>
+            <div style="font-size: 13px; color: #555;">
+              하코다테의 역사적인 모토마치 공원을 산책하고, 일본 전통 온천 문화를 체험하는 힐링 여행
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 모토마치 공원</div>
+            <div class="attraction-desc">
+              하코다테 항구를 한눈에 내려다보는 언덕 위의 공원. 서양식 건축물들이 늘어선 레트로 거리를 거닐며 
+              하코다테의 역사와 낭만을 느낄 수 있는 명소입니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 하코다테 온천 체험</div>
+            <div class="attraction-desc">
+              전통 일본식 온천에서 여행의 피로를 풀 수 있는 특별한 시간. 바디 타올과 페이스 타올이 제공되며, 
+              남녀탕이 분리되어 있습니다. 수영복 착용은 불가하며, 문신이 있을 경우 입욕이 거부될 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 현지식 석식</div>
+            <div class="attraction-desc">
+              온천 체험 후 하코다테 현지 레스토랑에서 신선한 해산물과 홋카이도 특산 요리를 즐길 수 있습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- H12 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/21, 하코다테 - H12 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 석식(자유식/2,000엔 지급)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(XXX), 석식(자유식/2,000엔 지급)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 4.5~5시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 언덕 위 쇼핑, 산 위 풍경</div>
+            <div style="font-size: 13px; color: #555;">
+              하코다테의 아름다운 전망을 즐기고, 레트로 창고에서 쇼핑과 자유로운 식사를 즐기는 여유 있는 일정
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 모토마치 공원</div>
+            <div class="attraction-desc">
+              하코다테의 역사적 중심지로, 서양식 건축물과 이국적인 분위기가 어우러진 산책로. 
+              항구와 도시를 한눈에 조망할 수 있는 뷰포인트입니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 하코다테 로프웨이</div>
+            <div class="attraction-desc">
+              하코다테산 정상까지 3분 만에 오르는 로프웨이. 정상에서는 하코다테 시가지와 양쪽 바다가 
+              만드는 독특한 지형을 360도 파노라마로 감상할 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 아카렌가 창고 쇼핑 & 자유 석식</div>
+            <div class="attraction-desc">
+              붉은 벽돌로 지어진 역사적인 창고 건물들이 쇼핑몰과 레스토랑으로 변신한 명소. 
+              다양한 기념품 쇼핑과 함께 2,000엔의 식사비를 지급받아 원하는 레스토랑에서 자유롭게 석식을 즐길 수 있습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S11 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/22, 오타루 (Day 1) - S11 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 석식(현지식)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️  식사 : 중식(XXX), 석식(현지식)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 4시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 스위트 오타루</div>
+            <div style="font-size: 13px; color: #555;">
+              텐구산 전망대에서 오타루 시가지를 조망하고, 낭만적인 오타루 운하와 오르골당에서 감성 여행
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 텐구산 로프웨이</div>
+            <div class="attraction-desc">
+              오타루 시가지와 이시카리만을 한눈에 조망할 수 있는 해발 532m의 전망대. 
+              로프웨이는 최대 30명까지 탑승 가능하며, 정상에서의 전망은 오타루 최고의 뷰포인트로 손꼽힙니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오타루 오르골당 & 과자거리</div>
+            <div class="attraction-desc">
+              3,000개 이상의 오르골을 전시한 일본 최대 규모의 오르골 전문점. 아름다운 음색의 오르골을 
+              감상하고 구매할 수 있으며, 인근 과자거리에서는 르타오, 키타카로 등 홋카이도 명품 과자를 맛볼 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 오타루 운하</div>
+            <div class="attraction-desc">
+              대정시대부터 이어져 온 역사적인 운하로, 석조 창고와 가스등이 늘어선 낭만적인 산책로. 
+              운하를 따라 걸으며 오타루의 고즈넉한 분위기를 만끽할 수 있습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S12 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/22, 오타루 (Day 1) - S12 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 식사 없음</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(XXX), 석식(XXX)</span>
+          <span>💪 코스 난이도 : 상</span>
+          <span>⏱️ 소요시간 : 약 6시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 샤코탄 트래킹 (40대 김부장 이야기)</div>
+            <div style="font-size: 13px; color: #555;">
+              홋카이도의 숨겨진 비경 샤코탄 반도를 트래킹하고, 자연 온천에서 힐링하는 액티브 투어
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 카무이 미사키 트래킹</div>
+            <div class="attraction-desc">
+              샤코탄 반도 끝에 위치한 신비로운 절벽 지대. 약 70~80분 소요되는 트래킹 코스를 따라 걸으면 
+              코발트블루 빛깔의 샤코탄 블루 바다와 웅장한 절벽을 만날 수 있습니다. 
+              <span style="color: #d32f2f; font-weight: 600;">※ 곰 출몰 지역으로 갑작스런 입장 통제가 있을 수 있습니다.</span>
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 미사키노유 샤코탄 온천</div>
+            <div class="attraction-desc">
+              바다를 바라보며 즐기는 천연 온천. 트래킹으로 지친 몸을 따뜻한 온천에서 풀 수 있습니다. 
+              바디 타올과 페이스 타올이 제공되며, 남녀탕 분리, 수영복 착용 불가입니다.
+              <span style="color: #666; font-size: 12px;">※ 11월~3월 휴관, 내년 4월 초 재확인 예정</span>
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 오타루 맥주 양조장 (오타루 창고 NO.1)</div>
+            <div class="attraction-desc">
+              역사적인 석조 창고를 개조한 수제 맥주 양조장. 자유롭게 견학하며 오타루의 크래프트 비어 문화를 
+              체험할 수 있습니다. 양조장 견학 후 도보로 크루즈에 자유 승선합니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="
+              margin-bottom: 0;
+              background: #fff3e0;
+              padding: 10px;
+              border-radius: 6px;
+              border-left: 4px solid #ff9800;
+              margin-top: 15px;
+            ">
+            <div class="attraction-title" style="color: #e65100">⚠️ 안내 사항</div>
+            <div class="attraction-desc" style="padding-left: 0; color: #bf360c">
+              트래킹에 적합한 복장과 신발 착용 필수 / 최대 40명 한정 / 식사 미포함 (간식 지참 권장) / 
+              기상 악화 시 일정 변경 가능
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S13 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/22-23, 오타루 (1박2일) - S13 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 3식 제공</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 석식(호텔 뷔페), 조식(호텔), 중식(현지식)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 1박2일 (Day1 약 3시간 + Day2 약 7~7.5시간)</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #fff9c4; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #fbc02d;">
+            <div style="font-weight: 700; color: #f57f00; margin-bottom: 6px;">🌟 프리미엄 1박2일 상품</div>
+            <div style="font-size: 13px; color: #555;">
+              크루즈를 벗어나 홋카이도의 자연과 온천 리조트에서 하룻밤을 보내는 특별한 경험. 
+              요테이산의 청정 자연수와 도야호의 유람선 투어까지 포함된 프리미엄 패키지입니다.
+            </div>
+          </div>
+
+          <div style="font-weight: 700; color: #1565c0; font-size: 14px; margin: 20px 0 10px 0; padding-bottom: 8px; border-bottom: 2px solid #e3f2fd;">
+            📅 Day 1 (6/22, 월요일)
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 요테이산 후키다시 공원</div>
+            <div class="attraction-desc">
+              '에조후지'로 불리는 요테이산 기슭에 위치한 공원. 요테이산에서 흘러내리는 맑은 용천수를 
+              직접 마실 수 있으며, 깨끗한 자연 속에서 산책을 즐길 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 키타유자 온천 호텔 (모리노 소라니와 급)</div>
+            <div class="attraction-desc">
+              홋카이도의 대표적인 온천 리조트 호텔에서 1박. 2~3인 1실 기준으로 배정되며, 
+              호텔 내 천연 온천과 뷔페 석식이 제공됩니다. 여유롭게 온천을 즐기며 여행의 피로를 풀 수 있습니다.
+              <br><span style="color: #666; font-size: 12px;">※ 싱글룸 발생 시 1인당 추가 요금 발생</span>
+            </div>
+          </div>
+
+          <div style="font-weight: 700; color: #1565c0; font-size: 14px; margin: 20px 0 10px 0; padding-bottom: 8px; border-bottom: 2px solid #e3f2fd;">
+            📅 Day 2 (6/23, 화요일)
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 도야호 유람선</div>
+            <div class="attraction-desc">
+              일본 3대 칼데라 호수 중 하나인 도야호를 유람선을 타고 약 50분간 순회. 
+              맑고 푸른 호수와 주변의 화산 지형이 만들어내는 절경을 감상할 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 쇼와신잔</div>
+            <div class="attraction-desc">
+              1943년 화산 활동으로 생성된 신생 화산. 붉은 용암 지대와 계속 솟아오르는 증기를 
+              가까이에서 관찰할 수 있는 독특한 지질학적 명소입니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 사이로 전망대</div>
+            <div class="attraction-desc">
+              도야호와 주변 산맥을 한눈에 조망할 수 있는 최고의 전망대. 
+              포토존에서 도야호의 아름다운 풍경을 배경으로 기념사진을 남길 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 오타루 오르골당 & 과자거리</div>
+            <div class="attraction-desc">
+              오타루로 돌아와 오르골당과 유명 과자 브랜드들이 모여 있는 과자거리를 둘러본 후 크루즈에 승선합니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="
+              margin-bottom: 0;
+              background: #fff3e0;
+              padding: 10px;
+              border-radius: 6px;
+              border-left: 4px solid #ff9800;
+              margin-top: 15px;
+            ">
+            <div class="attraction-title" style="color: #e65100">⚠️ 안내 사항</div>
+            <div class="attraction-desc" style="padding-left: 0; color: #bf360c">
+              • 최대 120명 한정 (3대 버스)<br>
+              • 호텔: 모리노 소라니와 키타유자 온천 호텔 급 (2~3인 1실 기준)<br>
+              • 싱글룸 발생 시 추가 요금 발생<br>
+              • 3월 20일까지 진행 여부 확정 필요<br>
+              • 5월 13일부터 취소 수수료 발생<br>
+              • 개인 세면도구 및 1박용 짐 준비 권장
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS11 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/23, 오타루 (Day 2) - SS11 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 중식(자유식/2,000엔 지급)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️  식사 : 중식(자유식/2,000엔 지급), 석식(선내)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 7.5~8시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 삿포로 RE:BORN</div>
+            <div style="font-size: 13px; color: #555;">
+              환경재단의 시그니처 프로그램. 세계적인 환경 건축가 안도 타다오의 작품을 감상하고, 
+              지속가능한 도시 재생 프로젝트인 모레에누마 공원에서 환경 강연을 듣는 특별한 투어
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 모레에누마 공원 (영상 15분 + Q&A 15분)</div>
+            <div class="attraction-desc">
+              세계적인 조각가 이사무 노구치가 설계한 대규모 조각 공원. 쓰레기 매립지를 예술 공원으로 
+              재탄생시킨 지속가능한 도시 재생 프로젝트의 상징입니다. 공원 방문 전 15분간 영상을 시청하고, 
+              환경 전문가와의 Q&A 시간을 통해 환경재단의 가치와 활동을 이해하는 시간을 가집니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오오도리 공원</div>
+            <div class="attraction-desc">
+              삿포로 시내 중심을 가로지르는 1.5km 길이의 대형 녹지 공원. TV타워를 배경으로 
+              기념사진을 촬영하고, 자유 중식을 위해 2,000엔이 지급됩니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 삿포로 맥주 박물관</div>
+            <div class="attraction-desc">
+              1876년 설립된 일본 최초의 맥주 공장. 붉은 벽돌 건물의 고풍스러운 분위기 속에서 
+              맥주의 역사와 제조 과정을 배우고, 신선한 맥주 시음(유료)을 즐길 수 있습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS12 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/23, 오타루 (Day 2) - SS12 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 중식(현지식)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(현지식), 석식(선내)</span>
+          <span>💪 코스 난이도 : 하</span>
+          <span>⏱️ 소요시간 : 약 8시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 스위트 파라다이스</div>
+            <div style="font-size: 13px; color: #555;">
+              달콤한 초콜릿의 세계와 낭만적인 오타루 운하를 즐기는 감성 투어
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 로이스 카카오 초콜릿 타운</div>
+            <div class="attraction-desc">
+              홋카이도가 자랑하는 프리미엄 초콜릿 브랜드 '로이스'의 테마파크. 
+              초콜릿 제조 과정을 자유롭게 견학하고, 다양한 초콜릿 제품을 구매할 수 있습니다. 
+              카페에서는 초콜릿 음료와 디저트를 즐길 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오타루 운하</div>
+            <div class="attraction-desc">
+              운하를 따라 늘어선 석조 창고와 가스등이 낭만적인 분위기를 연출하는 오타루의 상징. 
+              운하 산책로를 걸으며 오타루의 역사와 감성을 느낄 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 오타루 오르골당</div>
+            <div class="attraction-desc">
+              3,000개 이상의 오르골을 전시 판매하는 일본 최대 오르골 전문점. 
+              아름다운 선율과 정교한 디자인의 오르골을 구경하고 구매할 수 있으며, 
+              시내 면세점을 방문한 후 크루즈에 승선합니다.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS13 Card -->
+      <div class="course-card" style="border: 2px solid #66bb6a; margin-bottom: 0;">
+        <div class="card-header" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+          [ 6/23, 오타루 (Day 2) - SS13 ] 환경재단 <span style="float: right; font-size: 12px">🍽️ 중식(자유식/2,000엔 지급)</span>
+        </div>
+        <div class="card-info-row" style="background-color: #e8f5e9; border-bottom: 1px solid #c8e6c9;">
+          <span>🍽️ 식사 : 중식(자유식/2,000엔 지급), 석식(선내)</span>
+          <span>💪 코스 난이도 : 중</span>
+          <span>⏱️ 소요시간 : 약 7.5~8시간</span>
+        </div>
+        <div class="card-content">
+          <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #66bb6a;">
+            <div style="font-weight: 700; color: #2e7d32; margin-bottom: 6px;">🌿 컨셉: 건축과 예술, 자연의 아름다움</div>
+            <div style="font-size: 13px; color: #555;">
+              세계적인 건축가 안도 타다오의 명작 '부처의 언덕'을 감상하고, 삿포로의 역사적 건축물을 둘러보는 문화 예술 투어
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 부처의 언덕 (안도 타다오 설계)</div>
+            <div class="attraction-desc">
+              세계적인 건축가 안도 타다오가 설계한 마코마나이 다키노 료엔. 라벤더 언덕 너머로 
+              거대한 대불이 보이는 독특한 구조로, 건축과 자연이 완벽하게 조화를 이루는 명작입니다. 
+              계절마다 다른 꽃이 피어나는 언덕을 걸으며 영적인 평온함을 느낄 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item">
+            <div class="attraction-title">■ 오오도리 공원</div>
+            <div class="attraction-desc">
+              삿포로 시내 중심부의 대형 공원. TV타워를 배경으로 기념사진을 촬영하고, 
+              2,000엔의 식사비를 지급받아 원하는 레스토랑에서 자유롭게 중식을 즐길 수 있습니다.
+            </div>
+          </div>
+
+          <div class="attraction-item" style="margin-bottom: 0;">
+            <div class="attraction-title">■ 홋카이도 구 도청사 (외관)</div>
+            <div class="attraction-desc">
+              붉은 벽돌로 지어진 서양식 건축물로 '아카렌가 청사'로도 불립니다. 
+              1888년에 지어진 역사적 건축물로, 외관 관람과 사진 촬영 후 시내 면세점을 방문하고 크루즈에 승선합니다.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<script src="https://www.genspark.ai/sandbox_inspect.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9c4d4e28c82d3271","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body></html>
